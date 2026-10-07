@@ -56,6 +56,11 @@ i podrozdziały, numerowane definicje, przykłady i wzory oraz spis treści
 z klikalnymi czarnymi odnośnikami bez obramowania. Wzorzec jest używany
 wyłącznie do formatowania, a nie jako źródło treści wykładu.
 
+Każdy rodzaj elementu (definicja, przykład, twierdzenie, fakt, lemat,
+wniosek, uwaga) ma osobny licznik resetowany na początku `\section`.
+Licznik obejmuje całą sekcję wraz z jej podsekcjami. Numery mają postać
+`rozdział.sekcja.numer`. Skrypt nie zawiera dat otrzymania materiałów.
+
 Nowe rysunki należy umieszczać w `grafika/`, wstawiać przez
 `\includegraphics`, nadawać im `\label` i odwoływać się do nich przez `\ref`.
 

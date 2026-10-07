@@ -12,6 +12,10 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 
 - Przepisuj dostarczone notatki i zdjęcia po polsku do odpowiednich rozdziałów.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
+- Nie umieszczaj w skrypcie informacji o dacie otrzymania materiałów.
+- Definicje, przykłady, twierdzenia, fakty, lematy, wnioski i uwagi mają osobne
+  liczniki resetowane przy każdej `\section`, wspólne dla jej podsekcji.
+  Numer ma postać `rozdział.sekcja.numer`, np. Definicja 1.3.1 i Fakt 1.3.1.
 - Oryginalne materiały kopiuj do `materialy/RRRR-MM-DD/`; nie usuwaj ich z Pobranych.
 - Wszystkie rysunki i ich edytowalne źródła umieszczaj osobno w `grafika/`.
   Stosuj `\label`, `\ref` i względne ścieżki.
