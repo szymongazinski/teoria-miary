@@ -24,11 +24,15 @@
 \allowdisplaybreaks[1]
 
 \theoremstyle{definition}
-\newtheorem{definicja}{Definicja}[chapter]
-\newtheorem{przyklad}[definicja]{Przykład}
-\newtheorem{uwaga}[definicja]{Uwaga}
+% Każdy rodzaj ma osobny licznik, wspólny dla całej sekcji i jej podsekcji.
+\newtheorem{definicja}{Definicja}[section]
+\newtheorem{przyklad}{Przykład}[section]
+\newtheorem{uwaga}{Uwaga}[section]
 \theoremstyle{plain}
-\newtheorem{fakt}[definicja]{Fakt}
+\newtheorem{fakt}{Fakt}[section]
+\newtheorem{twierdzenie}{Twierdzenie}[section]
+\newtheorem{lemat}{Lemat}[section]
+\newtheorem{wniosek}{Wniosek}[section]
 \renewcommand{\proofname}{Dowód}
 
 \newcommand{\R}{\mathbb{R}}
