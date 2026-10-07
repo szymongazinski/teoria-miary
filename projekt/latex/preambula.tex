@@ -1,0 +1,38 @@
+% Typografia wzorowana na „Miara i całka” G. Plebanka:
+% PL Roman, 12 pt, A4, klasyczne rozdziały i podrozdziały.
+\usepackage[utf8]{inputenc}
+\usepackage[OT4,plmath]{polski}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[left=30.56mm,right=26.2mm,top=30mm,bottom=28mm]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\hypersetup{
+  pdftitle={Teoria miary},
+  pdfsubject={Skrypt z wykładów},
+  linktoc=all,
+  bookmarksnumbered=true
+}
+\graphicspath{{../grafika/}}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{2}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+\setlist[enumerate]{label=\arabic*),leftmargin=2.1em,itemsep=0.25em}
+\allowdisplaybreaks[1]
+
+\theoremstyle{definition}
+\newtheorem{definicja}{Definicja}[chapter]
+\newtheorem{przyklad}[definicja]{Przykład}
+\newtheorem{uwaga}[definicja]{Uwaga}
+\theoremstyle{plain}
+\newtheorem{fakt}[definicja]{Fakt}
+\renewcommand{\proofname}{Dowód}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\Rbar}{\overline{\mathbb{R}}}
+

@@ -1,0 +1,30 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\input{preambula}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+  \centering
+  {\large Semestr 3\par}
+  \vspace{3cm}
+  {\LARGE\bfseries Teoria miary\par}
+  \vspace{0.6cm}
+  {\large Skrypt z wykładów\par}
+  \vfill
+  {\normalsize Materiały otrzymane 8 października 2026 r.\par}
+\end{titlepage}
+
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\pdfbookmark[0]{Spis treści}{spis-tresci}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+\input{rozdzialy/01-podstawowe-pojecia}
+
+\end{document}
+
