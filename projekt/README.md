@@ -57,9 +57,10 @@ z klikalnymi czarnymi odnośnikami bez obramowania. Wzorzec jest używany
 wyłącznie do formatowania, a nie jako źródło treści wykładu.
 
 Każdy rodzaj elementu (definicja, przykład, twierdzenie, fakt, lemat,
-wniosek, uwaga) ma osobny licznik resetowany na początku `\section`.
-Licznik obejmuje całą sekcję wraz z jej podsekcjami. Numery mają postać
-`rozdział.sekcja.numer`. Skrypt nie zawiera dat otrzymania materiałów.
+wniosek, uwaga) ma osobny licznik ciągły przez cały rozdział i resetowany
+wyłącznie na początku `\chapter`. Sekcje i podsekcje nie resetują liczników.
+Numery mają postać `rozdział.numer`, np. Definicja 1.1, Definicja 1.2
+oraz osobno Przykład 1.1, Przykład 1.2. Skrypt nie zawiera dat otrzymania materiałów.
 
 Nowe rysunki należy umieszczać w `grafika/`, wstawiać przez
 `\includegraphics`, nadawać im `\label` i odwoływać się do nich przez `\ref`.

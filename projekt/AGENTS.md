@@ -14,8 +14,9 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
 - Nie umieszczaj w skrypcie informacji o dacie otrzymania materiałów.
 - Definicje, przykłady, twierdzenia, fakty, lematy, wnioski i uwagi mają osobne
-  liczniki resetowane przy każdej `\section`, wspólne dla jej podsekcji.
-  Numer ma postać `rozdział.sekcja.numer`, np. Definicja 1.3.1 i Fakt 1.3.1.
+  liczniki ciągłe przez cały rozdział, resetowane wyłącznie przy `\chapter`.
+  Sekcje i podsekcje nie resetują liczników. Numer ma postać `rozdział.numer`,
+  np. Definicja 1.1, Definicja 1.2 oraz osobno Przykład 1.1, Przykład 1.2.
 - Oryginalne materiały kopiuj do `materialy/RRRR-MM-DD/`; nie usuwaj ich z Pobranych.
 - Wszystkie rysunki i ich edytowalne źródła umieszczaj osobno w `grafika/`.
   Stosuj `\label`, `\ref` i względne ścieżki.
