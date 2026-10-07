@@ -1,0 +1,179 @@
+\chapter{Podstawowe pojęcia}
+\label{chap:podstawowe-pojecia}
+
+\section{Odcinki i prostokąty}
+\label{sec:terminologia}
+
+\begin{definicja}[Odcinki]
+Niech $a,b\in\R$ oraz $a\leq b$. Odcinek otwarty o końcach $a$ i $b$ to
+\begin{equation}
+  (a,b)=\{x\in\R:a<x<b\}.
+  \label{eq:odcinek-otwarty}
+\end{equation}
+Analogicznie określamy odcinek domknięty i odcinki półotwarte:
+\begin{align*}
+  [a,b]&=\{x\in\R:a\leq x\leq b\},\\
+  [a,b)&=\{x\in\R:a\leq x<b\},\\
+  (a,b]&=\{x\in\R:a<x\leq b\}.
+\end{align*}
+W szczególności jednopunktowy zbiór $\{a\}$ zapisujemy również jako $[a,a]$.
+\end{definicja}
+
+\begin{definicja}[Prostokąt uogólniony]
+Niech $d\in\N$ oraz niech $I_1,\ldots,I_d$ będą odcinkami w $\R$.
+Prostokątem uogólnionym w $\R^d$ nazywamy zbiór
+\begin{equation}
+  P=I_1\times\cdots\times I_d
+   =\{(x_1,\ldots,x_d)\in\R^d:
+       x_i\in I_i\text{ dla każdego }i=1,\ldots,d\}.
+  \label{eq:prostokat}
+\end{equation}
+\end{definicja}
+
+\section{Prosta rozszerzona}
+\label{sec:prosta-rozszerzona}
+
+\begin{definicja}[Prosta rozszerzona]
+Prostą rozszerzoną nazywamy zbiór
+\begin{equation}
+  \Rbar=[-\infty,+\infty]=\R\cup\{-\infty,+\infty\}.
+  \label{eq:prosta-rozszerzona}
+\end{equation}
+Dla każdej liczby $a\in\R$ przyjmujemy
+\[
+  -\infty<a<+\infty.
+\]
+\end{definicja}
+
+Dla $a\in\R$ obowiązują reguły
+\begin{align*}
+  a+(+\infty)&=(+\infty)+a=+\infty,\\
+  a-(+\infty)&=-\infty.
+\end{align*}
+W teorii miary stosujemy także konwencję
+\begin{equation}
+  0\cdot(+\infty)=(+\infty)\cdot0=0.
+  \label{eq:zero-nieskonczonosc}
+\end{equation}
+
+\begin{uwaga}
+Równość \eqref{eq:zero-nieskonczonosc} jest przyjętą konwencją rachunku
+na prostej rozszerzonej. Nie jest regułą obliczania granic: iloczyn typu
+$0\cdot\infty$ w zadaniu o granicach pozostaje formą nieoznaczoną.
+\end{uwaga}
+
+\section{Granica górna i dolna ciągu zbiorów}
+\label{sec:granice-zbiorow}
+
+Niech $(A_n)_{n\geq1}$ będzie ciągiem podzbiorów ustalonego zbioru $X$.
+
+\begin{definicja}[Granica górna]
+Granicą górną ciągu $(A_n)$ nazywamy zbiór
+\begin{equation}
+  \limsup_{n\to\infty}A_n
+  =\bigcap_{n=1}^{\infty}\bigcup_{k=n}^{\infty}A_k
+  =\{x\in X:\forall n\geq1\ \exists k\geq n\quad x\in A_k\}.
+  \label{eq:limsup}
+\end{equation}
+Innymi słowy, $x\in\limsup_{n\to\infty}A_n$ wtedy i tylko wtedy, gdy $x$
+należy do nieskończenie wielu zbiorów $A_n$.
+\end{definicja}
+
+\begin{definicja}[Granica dolna]
+Granicą dolną ciągu $(A_n)$ nazywamy zbiór
+\begin{equation}
+  \liminf_{n\to\infty}A_n
+  =\bigcup_{n=1}^{\infty}\bigcap_{k=n}^{\infty}A_k
+  =\{x\in X:\exists n\geq1\ \forall k\geq n\quad x\in A_k\}.
+  \label{eq:liminf}
+\end{equation}
+Innymi słowy, $x\in\liminf_{n\to\infty}A_n$ wtedy i tylko wtedy, gdy $x$
+należy do prawie wszystkich zbiorów $A_n$, czyli do wszystkich od pewnego
+miejsca ciągu.
+\end{definicja}
+
+\begin{fakt}
+Dla każdego ciągu zbiorów $(A_n)$ zachodzi
+\begin{equation}
+  \liminf_{n\to\infty}A_n\subseteq\limsup_{n\to\infty}A_n.
+  \label{eq:inkluzja-granic}
+\end{equation}
+\end{fakt}
+
+\begin{proof}
+Jeżeli punkt należy do wszystkich zbiorów od pewnego miejsca ciągu,
+to należy do nieskończenie wielu zbiorów tego ciągu.
+\end{proof}
+
+\begin{definicja}[Zbieżność ciągu zbiorów]
+Jeżeli
+\[
+  \liminf_{n\to\infty}A_n=\limsup_{n\to\infty}A_n,
+\]
+to mówimy, że ciąg $(A_n)$ jest zbieżny. Wspólną wartość tych granic
+oznaczamy przez $\lim_{n\to\infty}A_n$.
+\end{definicja}
+
+\section{Przykłady granic ciągów zbiorów}
+\label{sec:przyklady-granic}
+
+\begin{przyklad}[Ciąg naprzemienny]
+Niech
+\[
+  A_n=[0,1+(-1)^n],\qquad n\geq1.
+\]
+Wówczas
+\[
+  A_{2k-1}=\{0\},\qquad A_{2k}=[0,2],\qquad k\geq1.
+\]
+Punkt $0$ należy do każdego zbioru $A_n$. Każdy punkt $x\in(0,2]$ należy
+do wszystkich zbiorów o indeksach parzystych, a nie należy do żadnego
+zbioru o indeksie nieparzystym. Punkty spoza $[0,2]$ nie należą do
+żadnego z tych zbiorów. Zatem, zgodnie z \eqref{eq:limsup} i \eqref{eq:liminf},
+\begin{equation}
+  \liminf_{n\to\infty}A_n=\{0\},\qquad
+  \limsup_{n\to\infty}A_n=[0,2].
+  \label{eq:przyklad-naprzemienny}
+\end{equation}
+Granice są różne, więc ciąg $(A_n)$ nie jest zbieżny.
+\end{przyklad}
+
+\begin{przyklad}[Początkowe odcinki zbioru liczb naturalnych]
+Przyjmujemy $\N=\{1,2,3,\ldots\}$ i rozważamy ciąg
+\[
+  A_n=\{1,2,\ldots,n\},\qquad n\geq1.
+\]
+Dla każdego $m\in\N$ mamy $m\in A_n$ dla wszystkich $n\geq m$.
+Każda liczba naturalna należy więc do prawie wszystkich zbiorów $A_n$.
+Punkty spoza $\N$ nie należą do żadnego z nich. Stąd
+\begin{equation}
+  \liminf_{n\to\infty}A_n=\N=\limsup_{n\to\infty}A_n,
+  \qquad \lim_{n\to\infty}A_n=\N.
+  \label{eq:przyklad-naturalne}
+\end{equation}
+\end{przyklad}
+
+\section{Ciało i sigma-ciało zbiorów}
+\label{sec:cialo-sigma-cialo}
+
+\begin{definicja}[Ciało zbiorów]
+Ciałem zbiorów w przestrzeni $X$ nazywamy rodzinę $\A\subseteq\mathcal{P}(X)$
+spełniającą następujące warunki:
+\begin{enumerate}
+  \item $\varnothing\in\A$;
+  \item jeżeli $A,B\in\A$, to $A\cup B\in\A$;
+  \item jeżeli $A\in\A$, to $A^c\in\A$, gdzie $A^c=X\setminus A$.
+\end{enumerate}
+\end{definicja}
+
+\begin{definicja}[Sigma-ciało zbiorów]
+Sigma-ciałem (\mbox{$\sigma$-ciałem}) zbiorów w przestrzeni $X$ nazywamy
+rodzinę $\A\subseteq\mathcal{P}(X)$, dla której warunki 1) i 3) z definicji
+ciała są zachowane, a warunek 2) zastępujemy warunkiem:
+\begin{enumerate}[label=2\textquotesingle),start=2]
+  \item jeżeli $A_n\in\A$ dla każdego $n\geq1$, to
+  \[
+    \bigcup_{n=1}^{\infty}A_n\in\A.
+  \]
+\end{enumerate}
+\end{definicja}
