@@ -22,6 +22,8 @@
 \setlength{\parskip}{0pt}
 \setlist[enumerate]{label=\arabic*),leftmargin=2.1em,itemsep=0.25em}
 \allowdisplaybreaks[1]
+% Zachowaj numer rozdziału także przy wzorach w rozdziale 0.
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
 
 \theoremstyle{definition}
 % Każdy rodzaj ma osobny licznik, ciągły przez cały rozdział.

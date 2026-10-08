@@ -1,3 +1,4 @@
+\setcounter{chapter}{-1}
 \chapter{Podstawowe pojęcia}
 \label{chap:podstawowe-pojecia}
 \poczatekwykladu{1}
@@ -153,30 +154,3 @@ Punkty spoza $\N$ nie należą do żadnego z nich. Stąd
   \label{eq:przyklad-naturalne}
 \end{equation}
 \end{przyklad}
-
-\section{Ciało i sigma-ciało zbiorów}
-\label{sec:cialo-sigma-cialo}
-
-\begin{definicja}[Ciało zbiorów]
-\label{def:cialo}
-Ciałem zbiorów w przestrzeni $X$ nazywamy rodzinę $\A\subseteq\mathcal{P}(X)$
-spełniającą następujące warunki:
-\begin{enumerate}
-  \item $\varnothing\in\A$;
-  \item jeżeli $A,B\in\A$, to $A\cup B\in\A$;
-  \item jeżeli $A\in\A$, to $A^c\in\A$, gdzie $A^c=X\setminus A$.
-\end{enumerate}
-\end{definicja}
-
-\begin{definicja}[Sigma-ciało zbiorów]
-\label{def:sigma-cialo}
-Sigma-ciałem (\mbox{$\sigma$-ciałem}) zbiorów w przestrzeni $X$ nazywamy
-rodzinę $\A\subseteq\mathcal{P}(X)$, dla której warunki 1) i 3) z definicji
-ciała są zachowane, a warunek 2) zastępujemy warunkiem:
-\begin{enumerate}[label=2\textquotesingle),start=2]
-  \item jeżeli $A_n\in\A$ dla każdego $n\geq1$, to
-  \[
-    \bigcup_{n=1}^{\infty}A_n\in\A.
-  \]
-\end{enumerate}
-\end{definicja}
