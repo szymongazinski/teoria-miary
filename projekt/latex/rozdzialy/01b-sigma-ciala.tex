@@ -1,0 +1,262 @@
+\poczatekwykladu{2}
+\section{Własności sigma-ciał}
+\label{sec:wlasnosci-sigma-cial}
+
+Niech $\A$ będzie sigma-ciałem podzbiorów zbioru $X$.
+Wszystkie dopełnienia w tej części rozumiemy względem $X$.
+
+\begin{fakt}
+Zbiór $X$ należy do $\A$.
+\end{fakt}
+
+\begin{proof}
+Mamy $\varnothing\in\A$, a rodzina $\A$ jest zamknięta na dopełnienia.
+Zatem $X=\varnothing^c\in\A$.
+\end{proof}
+
+\begin{fakt}[Skończone sumy]
+Jeżeli $A_1,\ldots,A_m\in\A$, to
+\[
+  \bigcup_{k=1}^{m}A_k\in\A.
+\]
+\end{fakt}
+
+\begin{proof}
+Połóżmy $A_k=\varnothing$ dla $k>m$. Wtedy wszystkie zbiory tego ciągu
+należą do $\A$ i
+\[
+  \bigcup_{k=1}^{m}A_k=\bigcup_{k=1}^{\infty}A_k\in\A.
+\]
+\end{proof}
+
+\begin{fakt}[Przeliczalne i skończone przekroje]
+Jeżeli $A_n\in\A$ dla każdego $n\geq1$, to
+\[
+  \bigcap_{n=1}^{\infty}A_n\in\A.
+\]
+Rodzina $\A$ jest również zamknięta na skończone przekroje.
+\end{fakt}
+
+\begin{proof}
+Z praw de Morgana otrzymujemy
+\begin{equation}
+  \bigcap_{n=1}^{\infty}A_n
+  =\left(\bigcup_{n=1}^{\infty}A_n^c\right)^c\in\A.
+  \label{eq:przekroj-de-morgan}
+\end{equation}
+Skończone przekroje otrzymujemy tak samo, stosując prawo de Morgana
+do skończonych sum.
+\end{proof}
+
+\begin{fakt}[Różnice zbiorów]
+Jeżeli $A,B\in\A$, to $A\setminus B\in\A$.
+\end{fakt}
+
+\begin{proof}
+Wystarczy skorzystać z równości $A\setminus B=A\cap B^c$.
+\end{proof}
+
+\begin{fakt}[Różnice symetryczne]
+Jeżeli $A,B\in\A$, to $A\mathbin{\triangle}B\in\A$, gdzie
+\[
+  A\mathbin{\triangle}B=(A\setminus B)\cup(B\setminus A).
+\]
+\end{fakt}
+
+\begin{proof}
+Oba zbiory $A\setminus B$ i $B\setminus A$ należą do $\A$, a rodzina
+$\A$ jest zamknięta na sumy dwóch zbiorów.
+\end{proof}
+
+\begin{uwaga}[Równoważna postać definicji sigma-ciała]
+W definicji sigma-ciała wystarczy założyć, że rodzina $\A$ jest niepusta
+oraz zamknięta na dopełnienia i przeliczalne sumy.
+Warunek $\varnothing\in\A$ wynika wtedy z pozostałych założeń.
+\end{uwaga}
+
+\begin{proof}
+Wybierzmy $A\in\A$. Wtedy $A^c\in\A$ oraz
+$X=A\cup A^c\in\A$ (sumę dwóch zbiorów można zapisać jako sumę
+przeliczalną, powtarzając je w ciągu). Stąd $\varnothing=X^c\in\A$.
+\end{proof}
+
+\section{Zbiory przeliczalne i ich dopełnienia}
+\label{sec:przeliczalne-dopelnienia}
+
+\begin{przyklad}
+Niech $X$ będzie dowolnym zbiorem. Rodzina
+\begin{equation}
+  \A=\{A\subseteq X:
+    A\text{ jest przeliczalny lub }A^c\text{ jest przeliczalny}\}
+  \label{eq:sigma-cialo-przeliczalne}
+\end{equation}
+jest sigma-ciałem. Przez zbiór przeliczalny rozumiemy tutaj także zbiór
+skończony, czyli zbiór o mocy nie większej niż $\aleph_0$.
+\end{przyklad}
+
+\begin{proof}
+Sprawdzamy trzy warunki z definicji~\ref{def:sigma-cialo}.
+\begin{enumerate}
+  \item Zbiór $\varnothing$ jest przeliczalny, więc $\varnothing\in\A$.
+  \item Niech $A\in\A$ i $B=A^c$. Jeżeli $A$ jest przeliczalny,
+  to $B^c=A$ jest przeliczalny. Jeżeli $A^c$ jest przeliczalny,
+  to przeliczalny jest sam zbiór $B$. W obu przypadkach $B=A^c\in\A$.
+  \item Niech $A_n\in\A$ dla każdego $n\geq1$. Rozważamy dwa przypadki.
+
+  Jeżeli wszystkie zbiory $A_n$ są przeliczalne, to ich przeliczalna suma
+  $\bigcup_{n=1}^{\infty}A_n$ jest przeliczalna, zatem należy do $\A$.
+
+  Jeżeli pewien zbiór $A_{n_0}$ nie jest przeliczalny, to z $A_{n_0}\in\A$
+  wynika, że $A_{n_0}^c$ jest przeliczalny. Ponadto
+  \begin{equation}
+    \left(\bigcup_{n=1}^{\infty}A_n\right)^c
+    =\bigcap_{n=1}^{\infty}A_n^c\subseteq A_{n_0}^c.
+    \label{eq:dopelnienie-sumy-przeliczalne}
+  \end{equation}
+  Dopełnienie sumy jest więc przeliczalne. W tym przypadku również
+  $\bigcup_{n=1}^{\infty}A_n\in\A$.
+\end{enumerate}
+\end{proof}
+
+\section{Przestrzeń mierzalna}
+\label{sec:przestrzen-mierzalna}
+
+\begin{definicja}[Przestrzeń mierzalna]
+Przestrzenią mierzalną nazywamy parę $(X,\mathcal{F})$, gdzie
+$\mathcal{F}$ jest sigma-ciałem podzbiorów zbioru $X$.
+\end{definicja}
+
+\section{Przekroje i sigma-ciała generowane}
+\label{sec:sigma-ciala-generowane}
+
+\begin{twierdzenie}[Przekrój sigma-ciał]
+Niech $(\mathcal{F}_t)_{t\in T}$ będzie rodziną sigma-ciał podzbiorów
+ustalonego zbioru $X$. Wówczas
+\begin{equation}
+  \mathcal{G}=\bigcap_{t\in T}\mathcal{F}_t
+  \label{eq:przekroj-sigma-cial}
+\end{equation}
+jest sigma-ciałem. Dla pustej rodziny przyjmujemy, że jej przekrój
+jest równy $\mathcal{P}(X)$.
+\label{tw:przekroj-sigma-cial}
+\end{twierdzenie}
+
+\begin{proof}
+Jeżeli $T=\varnothing$, to $\mathcal{G}=\mathcal{P}(X)$ jest sigma-ciałem.
+Załóżmy zatem, że $T\neq\varnothing$.
+\begin{enumerate}
+  \item Dla każdego $t\in T$ mamy $\varnothing\in\mathcal{F}_t$,
+  więc $\varnothing\in\mathcal{G}$.
+  \item Jeżeli $A_n\in\mathcal{G}$ dla każdego $n\geq1$, to dla każdego
+  $t\in T$ wszystkie zbiory $A_n$ należą do $\mathcal{F}_t$.
+  Zatem dla każdego $t\in T$ mamy
+  \[
+    \bigcup_{n=1}^{\infty}A_n\in\mathcal{F}_t,
+  \]
+  czyli $\bigcup_{n=1}^{\infty}A_n\in\mathcal{G}$.
+  \item Jeżeli $A\in\mathcal{G}$, to $A\in\mathcal{F}_t$ dla każdego
+  $t\in T$. Stąd $A^c\in\mathcal{F}_t$ dla każdego $t\in T$,
+  a więc $A^c\in\mathcal{G}$.
+\end{enumerate}
+\end{proof}
+
+\begin{wniosek}
+Dla dowolnej rodziny $\mathcal{E}\subseteq\mathcal{P}(X)$ istnieje
+najmniejsze, w sensie zawierania, sigma-ciało podzbiorów $X$
+zawierające $\mathcal{E}$.
+\label{wn:najmniejsze-sigma-cialo}
+\end{wniosek}
+
+\begin{proof}
+Rozważmy rodzinę wszystkich sigma-ciał zawierających $\mathcal{E}$:
+\[
+  \mathfrak{S}=\{\mathcal{F}\subseteq\mathcal{P}(X):
+    \mathcal{F}\text{ jest sigma-ciałem i }\mathcal{E}\subseteq\mathcal{F}\}.
+\]
+Rodzina $\mathfrak{S}$ jest niepusta, ponieważ należy do niej
+$\mathcal{P}(X)$. Z twierdzenia~\ref{tw:przekroj-sigma-cial} wynika, że
+\[
+  \mathcal{G}=\bigcap_{\mathcal{F}\in\mathfrak{S}}\mathcal{F}
+\]
+jest sigma-ciałem. Każdy element $\mathcal{E}$ należy do każdego
+$\mathcal{F}\in\mathfrak{S}$, zatem $\mathcal{E}\subseteq\mathcal{G}$.
+Jeżeli $\mathcal{F}_0$ jest dowolnym sigma-ciałem zawierającym
+$\mathcal{E}$, to $\mathcal{F}_0\in\mathfrak{S}$, więc
+$\mathcal{G}\subseteq\mathcal{F}_0$.
+\end{proof}
+
+\begin{definicja}[Sigma-ciało generowane]
+Najmniejsze sigma-ciało zawierające rodzinę
+$\mathcal{E}\subseteq\mathcal{P}(X)$ nazywamy sigma-ciałem
+generowanym przez $\mathcal{E}$ i oznaczamy przez $\sigma(\mathcal{E})$.
+Zatem
+\begin{equation}
+  \sigma(\mathcal{E})
+  =\bigcap\{\mathcal{F}:\mathcal{F}\text{ jest sigma-ciałem w }X,
+     \ \mathcal{E}\subseteq\mathcal{F}\}.
+  \label{eq:sigma-generowane}
+\end{equation}
+\end{definicja}
+
+\section{Sigma-ciało zbiorów borelowskich}
+\label{sec:zbiory-borelowskie}
+
+\begin{definicja}[Zbiory borelowskie na prostej]
+Sigma-ciało generowane przez wszystkie zbiory otwarte w $\R$
+nazywamy sigma-ciałem zbiorów borelowskich i oznaczamy przez
+$\mathcal{B}(\R)$. Jego elementy nazywamy zbiorami borelowskimi.
+\end{definicja}
+
+\begin{fakt}
+Sigma-ciało $\mathcal{B}(\R)$ jest generowane przez rodzinę wszystkich
+odcinków otwartych:
+\begin{equation}
+  \mathcal{B}(\R)
+  =\sigma\bigl(\{(a,b):a,b\in\R,\ a<b\}\bigr).
+  \label{eq:borel-odcinki}
+\end{equation}
+\end{fakt}
+
+\begin{proof}
+Każdy odcinek otwarty jest zbiorem otwartym, zatem sigma-ciało po prawej
+stronie \eqref{eq:borel-odcinki} zawiera się w $\mathcal{B}(\R)$.
+Z drugiej strony każdy zbiór otwarty $U\subseteq\R$ jest sumą wszystkich
+odcinków $(p,q)\subseteq U$ o wymiernych końcach $p<q$.
+Takich odcinków jest co najwyżej przeliczalnie wiele. Zatem każdy zbiór
+otwarty należy do sigma-ciała generowanego przez odcinki otwarte,
+co daje przeciwną inkluzję.
+\end{proof}
+
+\begin{uwaga}
+Sama rodzina $\mathcal{J}$ wszystkich odcinków nie jest sigma-ciałem.
+Na przykład $(0,1)\in\mathcal{J}$, ale jego dopełnienie w $\R$,
+\[
+  (0,1)^c=(-\infty,0]\cup[1,+\infty),
+\]
+nie jest odcinkiem, więc nie należy do $\mathcal{J}$.
+\end{uwaga}
+
+\begin{samepage}
+\section{Pierścienie i sigma-pierścienie zbiorów}
+\label{sec:pierscienie}
+
+\begin{definicja}[Pierścień zbiorów]
+Pierścieniem zbiorów w $X$ nazywamy rodzinę
+$\mathcal{R}\subseteq\mathcal{P}(X)$ spełniającą warunki:
+\begin{enumerate}
+  \item $\varnothing\in\mathcal{R}$;
+  \item jeżeli $A,B\in\mathcal{R}$, to $A\cup B\in\mathcal{R}$;
+  \item jeżeli $A,B\in\mathcal{R}$, to $A\setminus B\in\mathcal{R}$.
+\end{enumerate}
+\end{definicja}
+
+\begin{definicja}[Sigma-pierścień zbiorów]
+Sigma-pierścieniem zbiorów w $X$ nazywamy pierścień
+$\mathcal{R}\subseteq\mathcal{P}(X)$ zamknięty na przeliczalne sumy.
+Oznacza to, że warunek 2) w definicji pierścienia zastępujemy warunkiem:
+jeżeli $A_n\in\mathcal{R}$ dla każdego $n\geq1$, to
+\[
+  \bigcup_{n=1}^{\infty}A_n\in\mathcal{R}.
+\]
+\end{definicja}
+\end{samepage}

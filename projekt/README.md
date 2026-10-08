@@ -1,7 +1,8 @@
 # Teoria miary
 
 Skrypt rozwijany na podstawie odręcznych notatek i zdjęć tablic.
-Najnowszy **[PDF](../Teoria-miary.pdf)** jest dostępny
+Najnowsze PDF-y: **[bez oznaczeń wykładów](../Teoria-miary.pdf)**
+i **[z oznaczeniami wykładów](../Teoria-miary-wyklady.pdf)** są dostępne
 w katalogu przedmiotu, obok folderu `projekt/`. Ten sam układ obowiązuje
 lokalnie i w głównym katalogu repozytorium na GitHubie.
 
@@ -14,6 +15,7 @@ Katalog `D:\Studia\Semestr 3\Teoria miary` zawiera tylko:
 ```text
 Teoria miary/
 ├── Teoria-miary.pdf
+├── Teoria-miary-wyklady.pdf
 └── projekt/
 ```
 
@@ -21,6 +23,7 @@ Cały kod, materiały, grafika, repozytorium Git oraz pliki robocze
 znajdują się w `projekt/`. Poniższe ścieżki są względem tego folderu:
 
 - `latex/main.tex` - dokument główny i kolejność rozdziałów.
+- `latex/main-wyklady.tex` - wariant z oznaczeniami początków wykładów.
 - `latex/preambula.tex` - pakiety, czcionka, formatowanie i polecenia matematyczne.
 - `latex/rozdzialy/` - tekst kolejnych rozdziałów.
 - `grafika/` - osobne źródła rysunków i ich gotowe pliki PDF.
@@ -33,7 +36,8 @@ znajdują się w `projekt/`. Poniższe ścieżki są względem tego folderu:
 
 Wymagany jest `pdflatex` z MiKTeX lub TeX Live dostępny w PATH.
 Na tym komputerze MiKTeX i potrzebne pakiety są już zainstalowane.
-Dwukrotne kliknięcie `projekt/kompiluj.cmd` przebuduje rysunki, skrypt i otworzy PDF.
+Dwukrotne kliknięcie `projekt/kompiluj.cmd` przebuduje rysunki i obie wersje
+skryptu oraz otworzy oba PDF-y.
 W PowerShell można wykonać:
 
 ```powershell
@@ -42,11 +46,19 @@ cd projekt
 .\kompiluj.ps1 -Otworz
 ```
 
-PDF obok folderu `projekt/` jest nadpisywany po udanej kompilacji
-i wersjonowany bezpośrednio w głównym katalogu repozytorium.
-Jeśli kompilacja się nie uda, wcześniejszy PDF pozostaje dostępny.
-W edytorze LaTeX należy budować `latex/main.tex` przez ten skrypt,
-aby zaktualizować również PDF w katalogu przedmiotu.
+Oba PDF-y obok folderu `projekt/` są aktualizowane po udanej kompilacji
+obu wersji i wersjonowane w głównym katalogu repozytorium.
+Jeśli kompilacja się nie uda, wcześniejsze PDF-y pozostają dostępne.
+Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
+
+## Podział na wykłady
+
+Oba warianty mają tę samą treść, kolejność i numerację matematyczną.
+Wariant `-wyklady.pdf` pokazuje dodatkowo nagłówki „Wykład 1”, „Wykład 2”
+itd. oraz odpowiadające im wpisy w klikalnym spisie treści. Wariant zwykły
+pomija znaczniki. Czerwona falowana kreska w materiałach wyznacza początek
+kolejnego wykładu. W tym miejscu wstawiaj `\poczatekwykladu{numer}`.
+Znaczniki nie resetują liczników. Nie dodawaj dat materiałów do PDF-a.
 
 ## Formatowanie
 

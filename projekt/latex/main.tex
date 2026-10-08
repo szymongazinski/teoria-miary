@@ -1,4 +1,6 @@
 \documentclass[12pt,a4paper,oneside]{report}
+\newif\ifchronologia
+\ifdefined\Chronologia\chronologiatrue\else\chronologiafalse\fi
 
 \input{preambula}
 
@@ -12,6 +14,10 @@
   {\LARGE\bfseries Teoria miary\par}
   \vspace{0.6cm}
   {\large Skrypt z wykładów\par}
+  \ifchronologia
+    \vspace{0.3cm}
+    {\normalsize Z oznaczeniami wykładów\par}
+  \fi
   \vfill
 \end{titlepage}
 
@@ -24,6 +30,7 @@
 \pagestyle{headings}
 
 \input{rozdzialy/01-podstawowe-pojecia}
+\input{rozdzialy/01b-sigma-ciala}
 
 \end{document}
 
