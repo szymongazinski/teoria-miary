@@ -51,6 +51,16 @@ obu wersji i wersjonowane w głównym katalogu repozytorium.
 Jeśli kompilacja się nie uda, wcześniejsze PDF-y pozostają dostępne.
 Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
 
+## Rozdziały
+
+- Rozdział 0 „Podstawowe pojęcia”: odcinki i prostokąty, prosta rozszerzona,
+  granice ciągów zbiorów oraz przykłady (sekcje 0.1–0.4).
+- Rozdział 1 „Ciało, pierścień, przestrzeń mierzalna”: od definicji ciała
+  i sigma-ciała (sekcja 1.1), następnie ich własności i dalsze pojęcia.
+
+Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek
+rozdziału 1; Wykład 2 zaczyna się przy własnościach sigma-ciał.
+
 ## Podział na wykłady
 
 Oba warianty mają tę samą treść, kolejność i numerację matematyczną.
