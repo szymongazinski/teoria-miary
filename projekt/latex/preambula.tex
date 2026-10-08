@@ -35,6 +35,19 @@
 \newtheorem{wniosek}{Wniosek}[chapter]
 \renewcommand{\proofname}{Dowód}
 
+% Znaczniki nie zmieniają rozdziałów, sekcji ani liczników matematycznych.
+\newcommand{\poczatekwykladu}[1]{%
+  \ifchronologia
+    \par\addvspace{\baselineskip}%
+    \phantomsection
+    \addcontentsline{toc}{section}{Wykład #1}%
+    \noindent{\large\bfseries Wykład #1}\par\nobreak
+    \noindent\rule{\linewidth}{0.4pt}\par\nobreak
+    \addvspace{0.5\baselineskip}%
+  \fi
+}
+
+
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\A}{\mathcal{A}}
