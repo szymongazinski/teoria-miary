@@ -55,7 +55,7 @@ Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
 
 - Rozdział 0 „Podstawowe pojęcia”: odcinki i prostokąty, prosta rozszerzona,
   granice ciągów zbiorów oraz przykłady (sekcje 0.1–0.4).
-- Rozdział 1 „Ciało, pierścień, przestrzeń mierzalna”: od definicji ciała
+- Rozdział 1 „Struktury na zbiorach”: od definicji ciała
   i sigma-ciała (sekcja 1.1), następnie ich własności i dalsze pojęcia.
 
 Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek

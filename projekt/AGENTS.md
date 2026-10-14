@@ -14,7 +14,7 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Przepisuj dostarczone notatki i zdjęcia po polsku do odpowiednich rozdziałów.
 - Rozdział 0 „Podstawowe pojęcia” obejmuje sekcje 0.1–0.4: odcinki
   i prostokąty, prostą rozszerzoną, granice ciągów zbiorów oraz ich przykłady.
-  Rozdział 1 „Ciało, pierścień, przestrzeń mierzalna” zaczyna się od definicji
+  Rozdział 1 „Struktury na zbiorach” zaczyna się od definicji
   ciała i sigma-ciała. Granice wykładów są niezależne od granic rozdziałów.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
 - Nie umieszczaj w skrypcie informacji o dacie otrzymania materiałów.
