@@ -42,6 +42,9 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   w głównym katalogu repozytorium. Nie twórz dodatkowych kopii w projekcie.
 - Wersjonuj źródła, materiały, grafikę i aktualny PDF. Repozytorium ma być publiczne
   zgodnie z poleceniem użytkownika z 8 października 2026 r.
+- Stosuj wyłącznie oficjalne, krótkie komunikaty commitów w formie bezosobowej:
+  `dodano wykład N` przy dodaniu wykładu, a `Poprawki stylistyczne` przy
+  pozostałych zmianach. Nie dodawaj rozwinięcia ani szczegółowych opisów.
 
 ## EasyShut
 
