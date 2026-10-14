@@ -83,3 +83,53 @@ wyłącznie formatowaniu. Nie są dodatkowymi źródłami treści wykładu.
 Czerwona falowana kreska na stronie 1 nowych notatek, po definicji sigma-ciała
 i przed „Własności sigma-ciał”, wyznacza początek wykładu 2. Wcześniejsza
 treść to wykład 1. Te granice są widoczne wyłącznie w wariancie z chronologią.
+
+## Uzupełnienie otrzymane 14 października 2026 r.
+
+- `2026-10-14/notatki.pdf` - niezmieniona kopia
+  `C:\Users\szymo\Downloads\Wyklady_bazgroly (3).pdf` (cztery strony).
+- `2026-10-14/tablica-01.jpg` - zdjęcie
+  `codex-clipboard-79d7b50c-1651-48cc-8a38-af1e8c5f6091.jpg`:
+  przykład ideału skończonych podzbiorów R.
+- `2026-10-14/tablica-02.jpg` - zdjęcie
+  `codex-clipboard-36cd93fc-4368-46a1-9992-8a62eddf10f3.jpg`:
+  przykład filtru podzbiorów R o skończonym dopełnieniu i dualność.
+- `2026-10-14/tablica-03.jpg` - zdjęcie
+  `codex-clipboard-ef8208ca-49f3-4b3d-9435-be55eee25464.jpg`:
+  dalszy fragment dualności oraz przykłady pi-układów: zbiory skończone,
+  zbiory o skończonym dopełnieniu, przedziały wraz ze zbiorem pustym.
+- `2026-10-14/tablica-04.jpg` - zdjęcie
+  `codex-clipboard-62d13d3e-e3b0-4dec-8037-43b9b391e731.jpg`:
+  brakująca definicja rodziny monotonicznej, przykład przedziałów
+  ze zbiorem pustym oraz kontrprzykład rodziny zbiorów skończonych.
+
+### Zakres i decyzje redakcyjne
+
+- Początek PDF-a powtarza uwagę o odcinkach oraz definicje pierścienia
+  i sigma-pierścienia. Nie dublowano istniejącej treści.
+- Czerwona falowana kreska na stronie 1, po sigma-pierścieniu, oznacza
+  początek wykładu 3 przed definicją ideału. Niebieska kreska na stronie 2
+  wskazuje brak definicji rodziny monotonicznej, uzupełniony z tablicy.
+- Dopisano ideały i filtry, przykłady skończonych zbiorów i skończonych
+  dopełnień w R, dualność ideał-filtr, pi-układy, lambda-układy, oba
+  twierdzenia o pi-układach i lambda-układach, rodziny monotoniczne,
+  rodziny generowane oraz twierdzenie o rodzinie monotonicznej
+  generowanej przez ciało z całym dowodem z notatek.
+- Dla przykładów ideału i filtru sprawdzono osobno każdy warunek definicji.
+  Uzasadniono też dualność oraz własności pozostałych przykładów z tablicy.
+  Nie dodawano przykładów ani tematów spoza materiałów.
+- Rodzina wszystkich przedziałów w przykładach obejmuje przedziały
+  nieograniczone. To konieczne doprecyzowanie zapisu z tablicy:
+  suma wstępującego ciągu ograniczonych przedziałów może być nieograniczona.
+  Kontrprzykład monotoniczności zbiorów skończonych rozpisano przy użyciu
+  ciągu {1,...,n}, który występował już we wcześniejszych materiałach.
+- W dowodzie twierdzenia monotonicznego zachowano konstrukcje G i H_B
+  oraz dwukrotne użycie minimalności rodziny generowanej. Rozpisano oba
+  kierunki monotoniczności i etap przejścia od B w ciele do B w całej
+  rodzinie monotonicznej. Poprawiono literówkę z notatek: suma dwóch
+  elementów rodziny należy do niej (znak przynależności, nie zawierania).
+- Twierdzenia o pi-układach i lambda-układach podano jako stwierdzenia,
+  zgodnie z materiałami, które nie zawierają ich dowodów.
+- Nowa treść pozostaje w rozdziale 1 w pliku
+  `01c-idealy-uklady-rodziny-monotoniczne.tex`. Rozdział 0 nie zmienia się.
+  Daty materiałów pozostają tylko w dokumentacji i ścieżkach.

@@ -1,0 +1,359 @@
+\poczatekwykladu{3}
+\section{Ideały i filtry zbiorów}
+\label{sec:idealy-filtry}
+
+W tej części wszystkie rozważane zbiory są podzbiorami ustalonego zbioru
+$X$, a dopełnienia bierzemy względem $X$.
+
+\begin{definicja}[Ideał zbiorów]
+\label{def:ideal}
+Rodzinę $\mathcal{I}\subseteq\mathcal{P}(X)$ nazywamy ideałem zbiorów,
+jeżeli spełnia następujące warunki:
+\begin{enumerate}
+  \item $\varnothing\in\mathcal{I}$ oraz $X\notin\mathcal{I}$;
+  \item jeżeli $A,B\in\mathcal{I}$, to $A\cup B\in\mathcal{I}$;
+  \item jeżeli $A\subseteq B$ i $B\in\mathcal{I}$, to $A\in\mathcal{I}$.
+\end{enumerate}
+Ostatni warunek oznacza, że każdy podzbiór elementu ideału również
+należy do tego ideału.
+\end{definicja}
+
+\begin{przyklad}[Ideał zbiorów skończonych]
+\label{prz:ideal-skonczone}
+Dla $X=\R$ rodzina
+\begin{equation}
+  \mathcal{I}_{\mathrm{fin}}
+  =\{A\subseteq\R:A\text{ jest skończony}\}
+  \label{eq:ideal-skonczone}
+\end{equation}
+jest ideałem zbiorów.
+\end{przyklad}
+
+\begin{proof}
+Sprawdzamy kolejno warunki definicji~\ref{def:ideal}.
+\begin{enumerate}
+  \item Zbiór pusty jest skończony, więc
+  $\varnothing\in\mathcal{I}_{\mathrm{fin}}$.
+  Zbiór $\R$ jest nieskończony, zatem $\R\notin\mathcal{I}_{\mathrm{fin}}$.
+  \item Jeżeli $A,B\in\mathcal{I}_{\mathrm{fin}}$, to oba zbiory są
+  skończone. Ich suma jest skończona, gdyż
+  $|A\cup B|\leq|A|+|B|<\infty$.
+  Stąd $A\cup B\in\mathcal{I}_{\mathrm{fin}}$.
+  \item Jeżeli $A\subseteq B$ i $B\in\mathcal{I}_{\mathrm{fin}}$,
+  to $|A|\leq|B|<\infty$. Zatem $A$ jest skończony i należy
+  do $\mathcal{I}_{\mathrm{fin}}$.
+\end{enumerate}
+\end{proof}
+
+\begin{definicja}[Filtr zbiorów]
+\label{def:filtr}
+Rodzinę $\mathcal{F}\subseteq\mathcal{P}(X)$ nazywamy filtrem zbiorów,
+jeżeli spełnia następujące warunki:
+\begin{enumerate}
+  \item $X\in\mathcal{F}$ oraz $\varnothing\notin\mathcal{F}$;
+  \item jeżeli $A,B\in\mathcal{F}$, to $A\cap B\in\mathcal{F}$;
+  \item jeżeli $A\subseteq B\subseteq X$ i $A\in\mathcal{F}$,
+  to $B\in\mathcal{F}$.
+\end{enumerate}
+Ostatni warunek oznacza, że każdy nadzbiór elementu filtru, zawarty
+w $X$, również należy do tego filtru.
+\end{definicja}
+
+\begin{przyklad}[Filtr zbiorów o skończonym dopełnieniu]
+\label{prz:filtr-dopelnienia-skonczone}
+Dla $X=\R$ rodzina
+\begin{equation}
+  \mathcal{F}_{\mathrm{cofin}}
+  =\{A\subseteq\R:A^c\text{ jest skończony}\}
+  \label{eq:filtr-dopelnienia-skonczone}
+\end{equation}
+jest filtrem zbiorów.
+\end{przyklad}
+
+\begin{proof}
+Sprawdzamy kolejno warunki definicji~\ref{def:filtr}.
+\begin{enumerate}
+  \item Mamy $\R^c=\varnothing$, więc
+  $\R\in\mathcal{F}_{\mathrm{cofin}}$.
+  Natomiast $\varnothing^c=\R$ jest nieskończony, zatem
+  $\varnothing\notin\mathcal{F}_{\mathrm{cofin}}$.
+  \item Jeżeli $A,B\in\mathcal{F}_{\mathrm{cofin}}$, to
+  $A^c$ i $B^c$ są skończone. Z prawa de Morgana otrzymujemy
+  \[
+    (A\cap B)^c=A^c\cup B^c.
+  \]
+  Prawa strona jest sumą dwóch zbiorów skończonych, więc jest skończona.
+  Stąd $A\cap B\in\mathcal{F}_{\mathrm{cofin}}$.
+  \item Jeżeli $A\subseteq B\subseteq\R$ i
+  $A\in\mathcal{F}_{\mathrm{cofin}}$, to $B^c\subseteq A^c$.
+  Ponieważ $A^c$ jest skończony, również $B^c$ jest skończony.
+  Zatem $B\in\mathcal{F}_{\mathrm{cofin}}$.
+\end{enumerate}
+\end{proof}
+
+\begin{fakt}[Dualność ideałów i filtrów]
+\label{fakt:dualnosc-ideal-filtr}
+Rodzina $\mathcal{I}\subseteq\mathcal{P}(X)$ jest ideałem wtedy
+i tylko wtedy, gdy rodzina
+\begin{equation}
+  \mathcal{I}^{\ast}=\{A^c:A\in\mathcal{I}\}
+  \label{eq:rodzina-dualna}
+\end{equation}
+jest filtrem.
+\end{fakt}
+
+\begin{proof}
+Niech $\mathcal{I}$ będzie ideałem. Z warunków
+$\varnothing\in\mathcal{I}$ i $X\notin\mathcal{I}$ otrzymujemy
+$X\in\mathcal{I}^{\ast}$ i $\varnothing\notin\mathcal{I}^{\ast}$.
+Jeżeli $C,D\in\mathcal{I}^{\ast}$, to $C^c,D^c\in\mathcal{I}$, więc
+\[
+  (C\cap D)^c=C^c\cup D^c\in\mathcal{I}.
+\]
+Zatem $C\cap D\in\mathcal{I}^{\ast}$.
+Jeżeli $C\subseteq D\subseteq X$ i $C\in\mathcal{I}^{\ast}$,
+to $D^c\subseteq C^c\in\mathcal{I}$. Zamknięcie ideału na branie
+podzbiorów daje $D^c\in\mathcal{I}$, czyli $D\in\mathcal{I}^{\ast}$.
+
+Odwrotnie, niech $\mathcal{I}^{\ast}$ będzie filtrem.
+Mamy $\varnothing\in\mathcal{I}$ i $X\notin\mathcal{I}$.
+Jeżeli $A,B\in\mathcal{I}$, to
+$(A\cup B)^c=A^c\cap B^c\in\mathcal{I}^{\ast}$,
+więc $A\cup B\in\mathcal{I}$.
+Jeżeli $A\subseteq B$ i $B\in\mathcal{I}$, to
+$B^c\subseteq A^c$ i $B^c\in\mathcal{I}^{\ast}$.
+Z warunku dotyczącego nadzbiorów w filtrze wynika
+$A^c\in\mathcal{I}^{\ast}$, a więc $A\in\mathcal{I}$.
+\end{proof}
+
+\section{Pi-układy i lambda-układy}
+\label{sec:pi-lambda-uklady}
+
+\begin{definicja}[Pi-układ]
+\label{def:pi-uklad}
+Rodzinę $\mathcal{P}\subseteq\mathcal{P}(X)$ nazywamy pi-układem
+($\pi$-układem), jeżeli jest niepusta i zamknięta na przekroje dwóch
+zbiorów, to znaczy
+\[
+  A,B\in\mathcal{P}\quad\Longrightarrow\quad A\cap B\in\mathcal{P}.
+\]
+\end{definicja}
+
+\begin{przyklad}[Rodziny będące pi-układami]
+W przestrzeni $X=\R$ następujące rodziny są pi-układami:
+\begin{enumerate}
+  \item rodzina $\mathcal{I}_{\mathrm{fin}}$ zbiorów skończonych;
+  \item rodzina $\mathcal{F}_{\mathrm{cofin}}$ zbiorów o skończonym dopełnieniu;
+  \item rodzina $\mathcal{J}$ wszystkich przedziałów w $\R$ wraz
+  ze zbiorem pustym; dopuszczamy także przedziały nieograniczone.
+\end{enumerate}
+\end{przyklad}
+
+\begin{proof}
+Każda z tych rodzin jest niepusta. Przekrój dwóch zbiorów skończonych
+jest skończony, gdyż jest podzbiorem każdego z nich.
+Zamknięcie rodziny $\mathcal{F}_{\mathrm{cofin}}$ na przekroje
+sprawdziliśmy w przykładzie~\ref{prz:filtr-dopelnienia-skonczone}.
+Przekrój dwóch przedziałów jest przedziałem albo zbiorem pustym,
+więc również należy do $\mathcal{J}$.
+\end{proof}
+
+\begin{definicja}[Lambda-układ]
+\label{def:lambda-uklad}
+Rodzinę $\mathcal{L}\subseteq\mathcal{P}(X)$ nazywamy lambda-układem
+($\lambda$-układem), jeżeli:
+\begin{enumerate}
+  \item $X\in\mathcal{L}$;
+  \item jeżeli $A,B\in\mathcal{L}$ i $A\subseteq B$,
+  to $B\setminus A\in\mathcal{L}$;
+  \item jeżeli $A_n\in\mathcal{L}$ dla każdego $n\geq1$ oraz
+  $A_1\subseteq A_2\subseteq\cdots$, to
+  $\bigcup_{n=1}^{\infty}A_n\in\mathcal{L}$.
+\end{enumerate}
+\end{definicja}
+
+\begin{twierdzenie}[Dynkina--Sierpińskiego]
+\label{tw:pi-lambda-sigma}
+Rodzina zbiorów, która jest jednocześnie pi-układem i lambda-układem,
+jest sigma-ciałem.
+\end{twierdzenie}
+
+\begin{twierdzenie}[O pi-układzie i lambda-układzie]
+\label{tw:pi-lambda}
+Jeżeli $\mathcal{P}$ jest pi-układem, $\mathcal{L}$ jest lambda-układem
+oraz $\mathcal{P}\subseteq\mathcal{L}$, to
+\begin{equation}
+  \sigma(\mathcal{P})\subseteq\mathcal{L}.
+  \label{eq:pi-lambda}
+\end{equation}
+\end{twierdzenie}
+
+\section{Rodziny monotoniczne}
+\label{sec:rodziny-monotoniczne}
+
+\begin{definicja}[Rodzina monotoniczna]
+\label{def:rodzina-monotoniczna}
+Rodzinę $\mathcal{M}\subseteq\mathcal{P}(X)$ nazywamy rodziną
+monotoniczną, jeżeli:
+\begin{enumerate}
+  \item jest zamknięta na przeliczalne sumy ciągów wstępujących:
+  jeżeli $A_n\in\mathcal{M}$ i $A_1\subseteq A_2\subseteq\cdots$, to
+  \[
+    \bigcup_{n=1}^{\infty}A_n\in\mathcal{M};
+  \]
+  \item jest zamknięta na przeliczalne przekroje ciągów zstępujących:
+  jeżeli $A_n\in\mathcal{M}$ i $A_1\supseteq A_2\supseteq\cdots$, to
+  \[
+    \bigcap_{n=1}^{\infty}A_n\in\mathcal{M}.
+  \]
+\end{enumerate}
+\end{definicja}
+
+\begin{przyklad}[Przedziały i zbiory skończone]
+Rodzina $\mathcal{J}$ wszystkich przedziałów w $\R$ wraz ze zbiorem
+pustym jest rodziną monotoniczną. Przedziały mogą być nieograniczone.
+Istotnie, suma wstępującego ciągu przedziałów jest przedziałem
+lub zbiorem pustym, podobnie jak przekrój zstępującego ciągu przedziałów.
+
+Natomiast rodzina zbiorów skończonych nie jest monotoniczna.
+Połóżmy
+\[
+  A_n=\{1,2,\ldots,n\}.
+\]
+Każdy $A_n$ jest skończony i $A_n\subseteq A_{n+1}$, ale
+\[
+  \bigcup_{n=1}^{\infty}A_n=\N
+\]
+nie jest zbiorem skończonym.
+\end{przyklad}
+
+\begin{uwaga}[Rodziny generowane]
+Podobnie jak w przypadku sigma-ciał można rozważać najmniejsze rodziny
+danego typu zawierające ustaloną rodzinę zbiorów.
+W szczególności przez $\mathcal{M}(\mathcal{E})$ oznaczamy najmniejszą
+rodzinę monotoniczną zawierającą
+$\mathcal{E}\subseteq\mathcal{P}(X)$.
+Jest ona przekrojem wszystkich rodzin monotonicznych zawierających
+$\mathcal{E}$:
+\begin{equation}
+  \mathcal{M}(\mathcal{E})
+  =\bigcap\{\mathcal{H}\subseteq\mathcal{P}(X):
+    \mathcal{H}\text{ jest monotoniczna, }\mathcal{E}\subseteq\mathcal{H}\}.
+  \label{eq:rodzina-monotoniczna-generowana}
+\end{equation}
+Rodzina pod przekrojem jest niepusta, ponieważ należy do niej
+$\mathcal{P}(X)$. Przekrój zachowuje oba warunki
+definicji~\ref{def:rodzina-monotoniczna}, co uzasadnia tę konstrukcję.
+\end{uwaga}
+
+\begin{twierdzenie}[O rodzinie monotonicznej generowanej przez ciało]
+\label{tw:rodzina-monotoniczna}
+Jeżeli $\mathcal{F}$ jest ciałem zbiorów w $X$, to
+\begin{equation}
+  \sigma(\mathcal{F})=\mathcal{M}(\mathcal{F}).
+  \label{eq:twierdzenie-monotoniczne}
+\end{equation}
+\end{twierdzenie}
+
+\begin{proof}
+\emph{Pierwsza inkluzja.}
+Sigma-ciało $\sigma(\mathcal{F})$ zawiera $\mathcal{F}$ i jest rodziną
+monotoniczną, gdyż jest zamknięte na dowolne przeliczalne sumy
+i przekroje. Z minimalności $\mathcal{M}(\mathcal{F})$ otrzymujemy
+\[
+  \mathcal{M}(\mathcal{F})\subseteq\sigma(\mathcal{F}).
+\]
+Ta inkluzja nie wymaga założenia, że $\mathcal{F}$ jest ciałem.
+
+\emph{Przeciwna inkluzja.}
+Wykażemy, że $\mathcal{M}(\mathcal{F})$ jest sigma-ciałem.
+Dla skrócenia zapisu połóżmy $\mathcal{M}=\mathcal{M}(\mathcal{F})$.
+
+\emph{1. Zbiór pusty.}
+Ponieważ $\mathcal{F}$ jest ciałem, mamy
+$\varnothing\in\mathcal{F}\subseteq\mathcal{M}$.
+
+\emph{2. Dopełnienia.}
+Rozważmy rodzinę
+\[
+  \mathcal{G}=\{A\in\mathcal{M}:A^c\in\mathcal{M}\}.
+\]
+Jest ona podrodziną $\mathcal{M}$ i zawiera $\mathcal{F}$, ponieważ
+$\mathcal{F}$ jest zamknięte na dopełnienia.
+Pokażemy, że $\mathcal{G}$ jest monotoniczna.
+Jeżeli $A_n\in\mathcal{G}$ i $A_1\subseteq A_2\subseteq\cdots$,
+to $\bigcup_{n=1}^{\infty}A_n\in\mathcal{M}$ oraz
+\[
+  \left(\bigcup_{n=1}^{\infty}A_n\right)^c
+  =\bigcap_{n=1}^{\infty}A_n^c\in\mathcal{M},
+\]
+gdyż ciąg $(A_n^c)$ jest zstępujący.
+Stąd $\bigcup_{n=1}^{\infty}A_n\in\mathcal{G}$.
+Analogicznie dla $A_1\supseteq A_2\supseteq\cdots$ mamy
+$\bigcap_{n=1}^{\infty}A_n\in\mathcal{M}$ i
+\[
+  \left(\bigcap_{n=1}^{\infty}A_n\right)^c
+  =\bigcup_{n=1}^{\infty}A_n^c\in\mathcal{M}.
+\]
+Zatem również $\bigcap_{n=1}^{\infty}A_n\in\mathcal{G}$.
+Rodzina $\mathcal{G}$ jest monotoniczna i zawiera $\mathcal{F}$,
+więc z minimalności $\mathcal{M}$ wynika
+$\mathcal{M}\subseteq\mathcal{G}$. Stąd $\mathcal{G}=\mathcal{M}$,
+czyli $\mathcal{M}$ jest zamknięta na dopełnienia.
+
+\emph{3. Sumy dwóch zbiorów.}
+Dla ustalonego $B\subseteq X$ połóżmy
+\[
+  \mathcal{H}_B=\{A\in\mathcal{M}:A\cup B\in\mathcal{M}\}.
+\]
+Rodzina $\mathcal{H}_B$ jest monotoniczna. Istotnie, dla wstępującego
+ciągu $(A_n)$ jej elementów mamy
+\[
+  \left(\bigcup_{n=1}^{\infty}A_n\right)\cup B
+  =\bigcup_{n=1}^{\infty}(A_n\cup B)\in\mathcal{M},
+\]
+ponieważ ciąg $(A_n\cup B)$ jest wstępujący.
+Sama suma $\bigcup_{n=1}^{\infty}A_n$ też należy do $\mathcal{M}$,
+więc należy do $\mathcal{H}_B$.
+Dla ciągu zstępującego analogicznie korzystamy z równości
+\[
+  \left(\bigcap_{n=1}^{\infty}A_n\right)\cup B
+  =\bigcap_{n=1}^{\infty}(A_n\cup B)\in\mathcal{M}.
+\]
+
+Najpierw niech $B\in\mathcal{F}$.
+Dla każdego $A\in\mathcal{F}$ mamy
+$A\cup B\in\mathcal{F}\subseteq\mathcal{M}$, więc
+$\mathcal{F}\subseteq\mathcal{H}_B$.
+Z minimalności $\mathcal{M}$ otrzymujemy
+$\mathcal{M}\subseteq\mathcal{H}_B\subseteq\mathcal{M}$.
+Zatem
+\[
+  \forall A\in\mathcal{M}\ \forall B\in\mathcal{F}
+  \qquad A\cup B\in\mathcal{M}.
+\]
+Teraz ustalmy dowolny $A\in\mathcal{M}$ i rozważmy
+$\mathcal{H}_A$. Ta rodzina jest monotoniczna, a z właśnie
+otrzymanego wyniku i przemienności sumy wynika, że zawiera
+$\mathcal{F}$. Ponownie minimalność daje
+$\mathcal{M}\subseteq\mathcal{H}_A$. Otrzymujemy więc
+\[
+  \forall A,B\in\mathcal{M}\qquad A\cup B\in\mathcal{M}.
+\]
+Indukcyjnie $\mathcal{M}$ jest zamknięta na skończone sumy.
+
+\emph{4. Sumy przeliczalne.}
+Niech $A_n\in\mathcal{M}$ dla każdego $n\geq1$. Połóżmy
+\[
+  B_n=\bigcup_{k=1}^{n}A_k.
+\]
+Wówczas $B_n\in\mathcal{M}$ oraz $B_n\subseteq B_{n+1}$.
+Z monotoniczności otrzymujemy
+\[
+  \bigcup_{n=1}^{\infty}A_n
+  =\bigcup_{n=1}^{\infty}B_n\in\mathcal{M}.
+\]
+Zatem $\mathcal{M}$ jest sigma-ciałem zawierającym $\mathcal{F}$,
+więc $\sigma(\mathcal{F})\subseteq\mathcal{M}$.
+Obie inkluzje dają równość~\eqref{eq:twierdzenie-monotoniczne}.
+\end{proof}

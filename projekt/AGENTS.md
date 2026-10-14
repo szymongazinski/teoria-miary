@@ -24,6 +24,10 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   Wstawiaj tam `\poczatekwykladu{numer}`; znacznik jest widoczny tylko
   w wersji z chronologią, także w spisie treści. Nie resetuje liczników.
   Nie wyznaczaj nowych granic wyłącznie na podstawie dat plików.
+- Niebieska falowana kreska oznacza brak w notatkach, nie granicę wykładu.
+  Porównuj całe notatki ze zdjęciami także poza oznaczonymi miejscami.
+  Uwzględniaj pominięte przykłady z tablicy; uzasadniaj ich własności,
+  ale nie dodawaj przykładów ani tematów spoza dostarczonych materiałów.
 - Definicje, przykłady, twierdzenia, fakty, lematy, wnioski i uwagi mają osobne
   liczniki ciągłe przez cały rozdział, resetowane wyłącznie przy `\chapter`.
   Sekcje i podsekcje nie resetują liczników. Numer ma postać `rozdział.numer`,

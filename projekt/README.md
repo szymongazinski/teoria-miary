@@ -60,6 +60,8 @@ Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
 
 Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek
 rozdziału 1; Wykład 2 zaczyna się przy własnościach sigma-ciał.
+Wykład 3 zaczyna się od ideałów i filtrów (sekcja 1.8); obejmuje też
+pi-układy, lambda-układy i rodziny monotoniczne.
 
 ## Podział na wykłady
 
@@ -69,6 +71,8 @@ itd. oraz odpowiadające im wpisy w klikalnym spisie treści. Wariant zwykły
 pomija znaczniki. Czerwona falowana kreska w materiałach wyznacza początek
 kolejnego wykładu. W tym miejscu wstawiaj `\poczatekwykladu{numer}`.
 Znaczniki nie resetują liczników. Nie dodawaj dat materiałów do PDF-a.
+Niebieska falowana kreska oznacza brakującą treść do uzupełnienia z tablicy.
+Notatki i zdjęcia należy porównywać w całości, także bez takich oznaczeń.
 
 ## Formatowanie
 
