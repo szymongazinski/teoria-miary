@@ -133,3 +133,56 @@ treść to wykład 1. Te granice są widoczne wyłącznie w wariancie z chronolo
 - Nowa treść pozostaje w rozdziale 1 w pliku
   `01c-idealy-uklady-rodziny-monotoniczne.tex`. Rozdział 0 nie zmienia się.
   Daty materiałów pozostają tylko w dokumentacji i ścieżkach.
+
+## Wykład 4: materiały otrzymane 16 października 2026 r.
+
+Niezmienione kopie dwunastu zdjęć z `C:\Users\szymo\AppData\Local\Temp\`
+zapisano w folderze `2026-10-16/`, z zachowaniem nazw i kolejności:
+
+- `IMG_6933.jpeg` - oznaczenia sigma-ciała borelowskiego i twierdzenie
+  o jego generatorach: przedziały oraz półproste różnych typów.
+- `IMG_6934.jpeg` - pierwsza inkluzja i lemat o monotoniczności generowania.
+- `IMG_6935.jpeg` - przedziały domknięte i półotwarte jako przekroje
+  otwartych oraz idempotentność generowania; ilustracja na osi.
+- `IMG_6936.jpeg` - generowanie przez przedziały domknięte, przybliżanie
+  przedziału otwartego i usunięcie jego dwóch końców.
+- `IMG_6937.jpeg` - generowanie przez lewe półproste otwarte.
+- `IMG_6938.jpeg` - przeciwna inkluzja, pozostałe rodziny półprostych,
+  uwaga o prostokątach i zbiorach borelowskich w R^d.
+- `IMG_6939.jpeg` - zbiory otwarte na prostej, generowanie przez otwarte,
+  uwaga o przestrzeniach metrycznych i topologicznych, ilustracje.
+- `IMG_6940.jpeg` - początek tematu miary: funkcje zbioru, skończona
+  i przeliczalna addytywność.
+- `IMG_6941.jpeg` - miara, przestrzeń z miarą i dowód skończonej addytywności.
+- `IMG_6942.jpeg` - addytywność dla skończonej rodziny i subtraktywność.
+- `IMG_6943.jpeg` - tożsamość miar sumy i przekroju oraz monotoniczność.
+- `IMG_6944.jpeg` - przeliczalna podaddytywność i rozłącznienie ciągu.
+
+### Zakres i decyzje redakcyjne
+
+- Całość jest wykładem 4, zgodnie z wyraźnym poleceniem użytkownika.
+  Znacznik umieszczono przed sekcją 1.11. Wykład trwa dalej w rozdziale 2
+  „Miara”, rozpoczynającym się w miejscu nagłówka „MIARA” na IMG_6940.
+- Zachowano kolejność tematów. Lematy pomocnicze z IMG_6934–IMG_6935
+  umieszczono po stwierdzeniu twierdzenia o generatorach, przed jego dowodem.
+  Oznaczenia B_R, B(R) i Bor(R) opisano jako oznaczenia tego samego sigma-ciała.
+  Wcześniejszych definicji i dowodów nie usuwano; użyto do nich odnośników.
+- Domknięcia półprostych dopisane na żółto na IMG_6933 uwzględniono
+  w twierdzeniu. Skrót „pozostałe równości podobnie” rozwinięto przy użyciu
+  tych samych przekrojów, sum i dopełnień co w dowodzie na tablicy.
+- Przy sumach przedziałów [a+1/n,b-1/n] i (a,b-1/n] rozpoczęto indeksowanie
+  od dostatecznie dużego n_0, aby końce spełniały przyjęte warunki definicji.
+  Nie zmienia to sumy. Alternatywny zapis przedziału otwartego przez
+  usunięcie końców zapisano jako [a,b] bez sumy singletonów {a} i {b}.
+- Na IMG_6938 każdy składnik (-n,a) musi być poprawnym przedziałem;
+  z tego samego powodu zaczęto sumę od n_0 takiego, że -n_0<a.
+- W definicjach addytywności na dowolnej rodzinie A zachowano warunek,
+  że rozważana suma należy do dziedziny funkcji zbioru. Dla sigma-ciała
+  ten warunek jest automatyczny.
+- Zachowano warunek miary zbioru pustego równej zero i warunek mu(A)<infinity
+  w subtraktywności. Dowód monotoniczności oparto na nieodjętej równości
+  mu(B)=mu(A)+mu(B bez A), prawdziwej także dla nieskończonych miar.
+- Rozpisano rozłącznienie B_1=A_1, B_(n+1)=A_(n+1) bez sumy wcześniejszych
+  zbiorów oraz uzasadniono rozłączność, zawieranie i równość sum.
+- Odtworzono diagramy w edytowalnych plikach TikZ w `grafika/`.
+  Nie dodawano przykładów ani dalszych własności spoza wykładu.

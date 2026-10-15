@@ -16,6 +16,9 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   i prostokąty, prostą rozszerzoną, granice ciągów zbiorów oraz ich przykłady.
   Rozdział 1 „Struktury na zbiorach” zaczyna się od definicji
   ciała i sigma-ciała. Granice wykładów są niezależne od granic rozdziałów.
+- Rozdział 2 „Miara” zaczyna się od funkcji zbioru i addytywności.
+  Wykład 4 obejmuje sekcje 1.11–1.12 o zbiorach borelowskich, a następnie
+  początek rozdziału 2. Zdjęcia IMG_6933–IMG_6944 mają ustaloną kolejność.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
 - Nie umieszczaj w skrypcie informacji o dacie otrzymania materiałów.
 - Utrzymuj oba PDF-y z jednej wspólnej treści. Wersję z chronologią buduje

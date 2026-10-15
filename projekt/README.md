@@ -57,11 +57,16 @@ Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
   granice ciągów zbiorów oraz przykłady (sekcje 0.1–0.4).
 - Rozdział 1 „Struktury na zbiorach”: od definicji ciała
   i sigma-ciała (sekcja 1.1), następnie ich własności i dalsze pojęcia.
+- Rozdział 2 „Miara”: funkcje zbioru, addytywność, definicja miary,
+  przestrzeń z miarą oraz podstawowe własności miary.
 
 Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek
 rozdziału 1; Wykład 2 zaczyna się przy własnościach sigma-ciał.
 Wykład 3 zaczyna się od ideałów i filtrów (sekcja 1.8); obejmuje też
 pi-układy, lambda-układy i rodziny monotoniczne.
+Wykład 4 zaczyna się od generatorów sigma-ciała borelowskiego (sekcja 1.11)
+i obejmuje również początek rozdziału 2. Materiały tego wykładu są
+przepisane w kolejności zdjęć IMG_6933–IMG_6944.
 
 ## Podział na wykłady
 
