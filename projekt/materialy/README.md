@@ -1,0 +1,290 @@
+# Materiały źródłowe
+
+## Otrzymane 8 października 2026 r.
+
+- `2026-10-08/notatki.pdf` - niezmieniona kopia przesłanego
+  `C:\Users\szymo\Downloads\Wyklady_bazgroly.pdf` (dwie strony).
+- `2026-10-08/tablica-01.jpg` - niezmieniona kopia zdjęcia tablicy
+  `codex-clipboard-da5bef6b-c781-4998-a4c0-924fa8a31167.jpg`.
+
+Data folderu oznacza datę otrzymania materiałów, nie ustaloną datę wykładu.
+
+## Zakres transkrypcji
+
+- Strona 1 notatek: odcinki, prostokąty uogólnione, prosta rozszerzona,
+  podstawowe konwencje rachunku, granica górna i dolna ciągu zbiorów,
+  inkluzja granic i zbieżność.
+- Strona 2 notatek: definicje ciała i sigma-ciała zbiorów.
+- Zdjęcie tablicy: zbieżność oraz przykłady `A_n = [0, 1 + (-1)^n]`
+  i `A_n = {1, 2, ..., n}` wraz z ich granicami.
+
+## Decyzje redakcyjne
+
+- Zapis granic z kreską górną i dolną zastąpiono standardowymi `limsup`
+  i `liminf`, zachowując definicje i kwantyfikatory.
+- W pierwszym przykładzie wykorzystano równoważne indeksowanie
+  `A_{2k-1} = {0}` dla `k >= 1`; na tablicy było `A_{2k+1} = {0}`.
+- W drugim przykładzie jawnie przyjęto `N = {1, 2, 3, ...}`,
+  zgodnie ze zbiorem zapisanym na tablicy.
+- Rozwinięto skrót „analogicznie domknięte” do definicji przedziałów.
+- Dodano krótkie objaśnienia wyników przykładów i inkluzji granic.
+  Nie dodawano nowych tematów wykładu.
+- Zapis `0 * infinity = 0` opisano jako konwencję teorii miary,
+  aby nie sugerować reguły obliczania granic iloczynów.
+- Pominięto żartobliwy dopisek pod konwencją mnożenia; nie zawiera treści
+  matematycznej. Dolny nagłówek na zdjęciu powtarza nazwę omawianego tematu.
+- Nie pozostały istotne niejasności w odczycie treści matematycznej.
+
+Wzorzec typograficzny i projekt rachunku prawdopodobieństwa służą
+wyłącznie formatowaniu. Nie są dodatkowymi źródłami treści wykładu.
+
+## Uzupełnienie otrzymane 9 października 2026 r.
+
+- `2026-10-09/notatki.pdf` - niezmieniona kopia
+  `C:\Users\szymo\Downloads\Wyklady_bazgroly (1).pdf` (trzy strony).
+- `2026-10-09/tablica-01.jpg` - zdjęcie
+  `codex-clipboard-2a4f5d12-7e95-46c3-aaa1-04249e2e4837.jpg`:
+  przykład sigma-ciała zbiorów przeliczalnych i o przeliczalnym dopełnieniu.
+- `2026-10-09/tablica-02.jpg` - zdjęcie
+  `codex-clipboard-bfc8eb42-d267-47c8-864b-bc1d9d3c7d7b.jpg`:
+  zakończenie dowodu zamknięcia tej rodziny na przeliczalne sumy.
+- `2026-10-09/tablica-03.jpg` - zdjęcie
+  `codex-clipboard-b06981c1-34de-4c12-9a92-ff7d0111ff83.jpg`:
+  zakończenie dowodu istnienia najmniejszego sigma-ciała.
+
+### Zakres i decyzje redakcyjne uzupełnienia
+
+- Początek pierwszej strony powtarza definicje ciała i sigma-ciała;
+  zachowano istniejące definicje bez duplikowania.
+- Dopisano wszystkie pięć własności sigma-ciał z dowodami, obserwację
+  o równoważnej definicji, przestrzeń mierzalną, twierdzenie o przekrojach,
+  wniosek o najmniejszym sigma-ciele, sigma-ciało generowane, zbiory
+  borelowskie oraz pierścienie i sigma-pierścienie zbiorów.
+- Dowód przykładu rodziny zbiorów przeliczalnych lub o przeliczalnym
+  dopełnieniu scalono z dwóch pierwszych zdjęć.
+- „Przeliczalny” w tym przykładzie znaczy „o mocy nie większej niż aleph_0”,
+  zgodnie z nierównościami na tablicy; obejmuje też zbiory skończone.
+- W twierdzeniu o dowolnej rodzinie sigma-ciał jawnie opisano konwencję
+  dla pustej rodziny. Dowód istnienia najmniejszego sigma-ciała uzupełniono
+  według notatek i trzeciego zdjęcia.
+- Niepewny dopisek „być może” przy zbiorach borelowskich zastąpiono
+  precyzyjnym stwierdzeniem o generowaniu przez odcinki otwarte i krótkim
+  dowodem przez przeliczalną rodzinę odcinków o wymiernych końcach.
+  Nie stwierdzono, że sama rodzina odcinków jest sigma-ciałem.
+- Do uwagi o braku zamknięcia rodziny odcinków na dopełnienia dobrano
+  konkretny odcinek (0,1), ponieważ w notatkach zapisano ogólnie I.
+- Nowa treść pozostaje w rozdziale 1, w osobnym pliku `01b-sigma-ciala.tex`.
+  Zachowano osobne, ciągłe przez rozdział liczniki każdego rodzaju elementu.
+- Nie pozostały istotne niejasności odczytu. Daty materiałów występują
+  tylko w dokumentacji źródeł i ścieżkach, nie w skrypcie PDF.
+
+## Granice wykładów
+
+Czerwona falowana kreska na stronie 1 nowych notatek, po definicji sigma-ciała
+i przed „Własności sigma-ciał”, wyznacza początek wykładu 2. Wcześniejsza
+treść to wykład 1. Te granice są widoczne wyłącznie w wariancie z chronologią.
+
+## Uzupełnienie otrzymane 14 października 2026 r.
+
+- `2026-10-14/notatki.pdf` - niezmieniona kopia
+  `C:\Users\szymo\Downloads\Wyklady_bazgroly (3).pdf` (cztery strony).
+- `2026-10-14/tablica-01.jpg` - zdjęcie
+  `codex-clipboard-79d7b50c-1651-48cc-8a38-af1e8c5f6091.jpg`:
+  przykład ideału skończonych podzbiorów R.
+- `2026-10-14/tablica-02.jpg` - zdjęcie
+  `codex-clipboard-36cd93fc-4368-46a1-9992-8a62eddf10f3.jpg`:
+  przykład filtru podzbiorów R o skończonym dopełnieniu i dualność.
+- `2026-10-14/tablica-03.jpg` - zdjęcie
+  `codex-clipboard-ef8208ca-49f3-4b3d-9435-be55eee25464.jpg`:
+  dalszy fragment dualności oraz przykłady pi-układów: zbiory skończone,
+  zbiory o skończonym dopełnieniu, przedziały wraz ze zbiorem pustym.
+- `2026-10-14/tablica-04.jpg` - zdjęcie
+  `codex-clipboard-62d13d3e-e3b0-4dec-8037-43b9b391e731.jpg`:
+  brakująca definicja rodziny monotonicznej, przykład przedziałów
+  ze zbiorem pustym oraz kontrprzykład rodziny zbiorów skończonych.
+
+### Zakres i decyzje redakcyjne
+
+- Początek PDF-a powtarza uwagę o odcinkach oraz definicje pierścienia
+  i sigma-pierścienia. Nie dublowano istniejącej treści.
+- Czerwona falowana kreska na stronie 1, po sigma-pierścieniu, oznacza
+  początek wykładu 3 przed definicją ideału. Niebieska kreska na stronie 2
+  wskazuje brak definicji rodziny monotonicznej, uzupełniony z tablicy.
+- Dopisano ideały i filtry, przykłady skończonych zbiorów i skończonych
+  dopełnień w R, dualność ideał-filtr, pi-układy, lambda-układy, oba
+  twierdzenia o pi-układach i lambda-układach, rodziny monotoniczne,
+  rodziny generowane oraz twierdzenie o rodzinie monotonicznej
+  generowanej przez ciało z całym dowodem z notatek.
+- Dla przykładów ideału i filtru sprawdzono osobno każdy warunek definicji.
+  Uzasadniono też dualność oraz własności pozostałych przykładów z tablicy.
+  Nie dodawano przykładów ani tematów spoza materiałów.
+- Rodzina wszystkich przedziałów w przykładach obejmuje przedziały
+  nieograniczone. To konieczne doprecyzowanie zapisu z tablicy:
+  suma wstępującego ciągu ograniczonych przedziałów może być nieograniczona.
+  Kontrprzykład monotoniczności zbiorów skończonych rozpisano przy użyciu
+  ciągu {1,...,n}, który występował już we wcześniejszych materiałach.
+- W dowodzie twierdzenia monotonicznego zachowano konstrukcje G i H_B
+  oraz dwukrotne użycie minimalności rodziny generowanej. Rozpisano oba
+  kierunki monotoniczności i etap przejścia od B w ciele do B w całej
+  rodzinie monotonicznej. Poprawiono literówkę z notatek: suma dwóch
+  elementów rodziny należy do niej (znak przynależności, nie zawierania).
+- Twierdzenia o pi-układach i lambda-układach podano jako stwierdzenia,
+  zgodnie z materiałami, które nie zawierają ich dowodów.
+- Nowa treść pozostaje w rozdziale 1 w pliku
+  `01c-idealy-uklady-rodziny-monotoniczne.tex`. Rozdział 0 nie zmienia się.
+  Daty materiałów pozostają tylko w dokumentacji i ścieżkach.
+
+## Wykład 4: materiały otrzymane 16 października 2026 r.
+
+Niezmienione kopie dwunastu zdjęć z `C:\Users\szymo\AppData\Local\Temp\`
+zapisano w folderze `2026-10-16/`, z zachowaniem nazw i kolejności:
+
+- `IMG_6933.jpeg` - oznaczenia sigma-ciała borelowskiego i twierdzenie
+  o jego generatorach: przedziały oraz półproste różnych typów.
+- `IMG_6934.jpeg` - pierwsza inkluzja i lemat o monotoniczności generowania.
+- `IMG_6935.jpeg` - przedziały domknięte i półotwarte jako przekroje
+  otwartych oraz idempotentność generowania; ilustracja na osi.
+- `IMG_6936.jpeg` - generowanie przez przedziały domknięte, przybliżanie
+  przedziału otwartego i usunięcie jego dwóch końców.
+- `IMG_6937.jpeg` - generowanie przez lewe półproste otwarte.
+- `IMG_6938.jpeg` - przeciwna inkluzja, pozostałe rodziny półprostych,
+  uwaga o prostokątach i zbiorach borelowskich w R^d.
+- `IMG_6939.jpeg` - zbiory otwarte na prostej, generowanie przez otwarte,
+  uwaga o przestrzeniach metrycznych i topologicznych, ilustracje.
+- `IMG_6940.jpeg` - początek tematu miary: funkcje zbioru, skończona
+  i przeliczalna addytywność.
+- `IMG_6941.jpeg` - miara, przestrzeń z miarą i dowód skończonej addytywności.
+- `IMG_6942.jpeg` - addytywność dla skończonej rodziny i subtraktywność.
+- `IMG_6943.jpeg` - tożsamość miar sumy i przekroju oraz monotoniczność.
+- `IMG_6944.jpeg` - przeliczalna podaddytywność i rozłącznienie ciągu.
+
+### Zakres i decyzje redakcyjne
+
+- Całość jest wykładem 4, zgodnie z wyraźnym poleceniem użytkownika.
+  Znacznik umieszczono przed sekcją 1.11. Wykład trwa dalej w rozdziale 2
+  „Miara”, rozpoczynającym się w miejscu nagłówka „MIARA” na IMG_6940.
+- Zachowano kolejność tematów. Lematy pomocnicze z IMG_6934–IMG_6935
+  umieszczono po stwierdzeniu twierdzenia o generatorach, przed jego dowodem.
+  Oznaczenia B_R, B(R) i Bor(R) opisano jako oznaczenia tego samego sigma-ciała.
+  Wcześniejszych definicji i dowodów nie usuwano; użyto do nich odnośników.
+- Domknięcia półprostych dopisane na żółto na IMG_6933 uwzględniono
+  w twierdzeniu. Skrót „pozostałe równości podobnie” rozwinięto przy użyciu
+  tych samych przekrojów, sum i dopełnień co w dowodzie na tablicy.
+- Przy sumach przedziałów [a+1/n,b-1/n] i (a,b-1/n] rozpoczęto indeksowanie
+  od dostatecznie dużego n_0, aby końce spełniały przyjęte warunki definicji.
+  Nie zmienia to sumy. Alternatywny zapis przedziału otwartego przez
+  usunięcie końców zapisano jako [a,b] bez sumy singletonów {a} i {b}.
+- Na IMG_6938 każdy składnik (-n,a) musi być poprawnym przedziałem;
+  z tego samego powodu zaczęto sumę od n_0 takiego, że -n_0<a.
+- W definicjach addytywności na dowolnej rodzinie A zachowano warunek,
+  że rozważana suma należy do dziedziny funkcji zbioru. Dla sigma-ciała
+  ten warunek jest automatyczny.
+- Zachowano warunek miary zbioru pustego równej zero i warunek mu(A)<infinity
+  w subtraktywności. Dowód monotoniczności oparto na nieodjętej równości
+  mu(B)=mu(A)+mu(B bez A), prawdziwej także dla nieskończonych miar.
+- Rozpisano rozłącznienie B_1=A_1, B_(n+1)=A_(n+1) bez sumy wcześniejszych
+  zbiorów oraz uzasadniono rozłączność, zawieranie i równość sum.
+- Odtworzono diagramy w edytowalnych plikach TikZ w `grafika/`.
+  Nie dodawano przykładów ani dalszych własności spoza wykładu.
+
+## Wykład 5: materiały otrzymane 21 października 2026 r.
+
+- `2026-10-21/notatki.pdf` - niezmieniona kopia
+  `C:\Users\szymo\Downloads\Wyklady_bazgroly (4).pdf` (dwie strony).
+- `2026-10-21/IMG_6965.jpeg` - końcowy rachunek w dowodzie ciągłości
+  z dołu i początek przykładu miary liczącej.
+- `2026-10-21/IMG_6966.jpeg` - addytywność miary liczącej:
+  składnik nieskończony oraz skończona suma zbiorów skończonych.
+- `2026-10-21/IMG_6967.jpeg` - zakończenie przypadku nieskończonej sumy,
+  miara Diraca, miara o skończonym nośniku oraz schemat ciężarków.
+- `2026-10-21/IMG_6968.jpeg` - relacja równoważności i wybór zbioru Vitaliego,
+  wymierne przesunięcia, pokrycie [0,1] i ograniczenie w [-1,2].
+- `2026-10-21/IMG_6969.jpeg` - niezmienniczość miary zewnętrznej na
+  przesunięcia i sprzeczność z przeliczalną addytywnością.
+
+### Zakres i decyzje redakcyjne
+
+- Pierwszy fragment PDF-a powtarza koniec dowodu twierdzenia o rodzinie
+  monotonicznej; nie dublowano go. Czerwona kreska przed ciągłością miary
+  wyznacza wykład 5. Materiały pozostają w rozdziale 2, w sekcjach 2.4–2.8.
+- Zachowano twierdzenia o ciągłości z dołu i z góry; w drugim pozostawiono
+  warunek mu(X)<infinity z notatek. Rachunek ciągłości z dołu zapisano przez
+  addytywność sum częściowych, bez odejmowania dwóch możliwych nieskończoności.
+  Rozpisano dowód ciągłości z góry za pomocą dopełnień i ciągłości z dołu.
+- W definicji sigma-skończoności uzupełniono pominięte warunki X_n w F
+  oraz X jako suma X_n; sam warunek mu(X_n)<infinity nie wystarcza.
+  Zachowano definicje miary skończonej i zupełnej.
+- Scalono wszystkie trzy przypadki dowodu dla miary liczącej ze zdjęć.
+  Dla miary Diraca i skończonej sumy miar punktowych sprawdzono aksjomaty
+  miary. Dopuszczono nieskończone wagi zgodnie z tablicą, z obowiązującą
+  wcześniej konwencją 0*infinity=0.
+- Nieczytelne konkretne wagi przy szkicu ciężarków na IMG_6967 nie zostały
+  odgadnięte. Rysunek odtworzono schematycznie dla trzech punktów x_1,x_2,x_3
+  i wag a_1,a_2,a_3 z podanego na tablicy ogólnego wzoru. Słupki oznaczają
+  przypisane wagi; nie wprowadzono nowego przykładu liczbowego.
+- Z PDF-a przepisano definicję miary zewnętrznej przez pokrycia przedziałami,
+  nieujemność, wartość na zbiorze pustym, monotoniczność i podaddytywność
+  z dowodem epsilon/2^n. Osobno uwzględniono przypadek nieskończonej sumy.
+- Dla zbioru Vitaliego ponumerowano Q przecięte z [-1,1] bez powtórzeń
+  za pomocą N. Usunięto niekonsekwentne indeksowanie od minus infinity.
+  Rozpisano rozłączność przesunięć i obie inkluzje [0,1] w S w [-1,2].
+- Równość z przeliczalną sumą miar zewnętrznych, opatrzoną na tablicy
+  znakiem zapytania, zapisano wyłącznie pod założeniem addytywności,
+  z którego wyprowadza się sprzeczność. Nie przyjęto jej jako własności.
+- Do oszacowania z tablicy uzupełniono krótkie uzasadnienie
+  lambda*([0,1])=1 przez otwarte pokrycia i zwartość odcinka.
+  To wyjaśnia użyte w argumentacji Vitaliego dodatnie dolne ograniczenie.
+  Zaznaczono wybór reprezentantów wykorzystujący aksjomat wyboru.
+- Daty występują wyłącznie w dokumentacji źródeł i nazwach folderów,
+  nie w treści PDF-a.
+
+## Wykład 6: materiały otrzymane 22 października 2026 r.
+
+- `2026-10-22/notatki.pdf` - niezmieniona kopia
+  `C:\Users\szymo\Downloads\Wyklady_bazgroly (5).pdf` (cztery strony).
+- `2026-10-22/tablica-01.jpg` - niezmieniona kopia
+  `codex-clipboard-27ae3fef-c55e-4e4c-bb08-a059e641593a.jpg`:
+  dowód mierzalności półprostej (-infinity,b), przez rozcięcie pokrycia
+  dowolnego A na przedziały I_n^- i I_n^+.
+
+### Zakres i decyzje redakcyjne
+
+- Czerwona falowana kreska na stronie 1, za dowodem podaddytywności,
+  wyznacza początek wykładu 6 przed niezmienniczością na przesunięcia.
+  Fragment o przesunięciach i zbiorze Vitaliego był już przepisany ze zdjęć
+  otrzymanych poprzednio; nie dublowano go. Nowe notatki doprecyzowują
+  granicę między wykładami 5 i 6: sekcja 2.8 należy do wykładu 6.
+- Zgodnie z poleceniem użytkownika dodano w obu wariantach dwa znaczniki
+  „Limbo”, poza numeracją: przed sekcją 2.8 i po całym dowodzie braku
+  przeliczalnej addytywności lambda* na P(R). Oba są także w spisie treści.
+- Po drugim znaczniku dopisano równoważne rodzaje pokryć przedziałami,
+  definicję miary zewnętrznej, warunek mierzalności Carathéodory'ego,
+  twierdzenie o sigma-ciele zbiorów mierzalnych i zupełności obcięcia,
+  miarę Lebesgue'a oraz wszystkie pięć własności z ostatniej strony.
+- Rozwinięto szkic dowodu twierdzenia Carathéodory'ego: podano zamknięcie
+  na skończone sumy, następnie na sumy rozłączne i dowolne przeliczalne,
+  przeliczalną addytywność obcięcia i mierzalność podzbiorów zbiorów zerowych.
+  Nie dodano nowych przykładów ani tematów.
+- Przedział wartości miary zewnętrznej zapisano jako [0,+infinity],
+  uwzględniając wartość nieskończoną, używaną również w materiałach.
+- Uzasadniono równoważność pokryć otwartych, domkniętych i dowolnych
+  przez rozszerzenia o epsilon/2^n. Dopuszczenie pustych składników
+  wyjaśnia użycie I_n^- i I_n^+ w dowodzie z tablicy.
+- Własność niezmienniczości miary Lebesgue'a uzupełniono o mierzalność
+  przesunięcia, wynikającą z warunku Carathéodory'ego. Dla zbiorów
+  przeliczalnych uzasadniono zerową miarę zewnętrzną i mierzalność.
+- Dowód długości przedziału rozwija argument zwartości użyty już przy
+  zbiorze Vitaliego. Dowód mierzalności półprostych przepisano z fotografii,
+  z osobnym przypadkiem nieskończonej miary zewnętrznej. Zawieranie
+  zbiorów borelowskich wynika z wcześniej udowodnionego generowania.
+- Nowa treść znajduje się w `02b-miary-zewnetrzne-caratheodory.tex`.
+  Podział rozdziałów i dotychczasowe numery elementów pozostają zachowane.
+  Daty materiałów nie występują w PDF-ach.
+
+## Okładka
+
+Zatwierdzona ilustracja znajduje się w `grafika/okladka-kreskowkowa.png`.
+Przedstawia antyczną scenę z postacią patrzącą w górę i napisem
+„PRAWDZIWE σ-CIAŁO” na cokole. Schemat aksjomatu wyboru pokazuje
+wybór jednego kwiatu z każdej donicy. Okładkę osadza `grafika/okladka.tex`;
+jest wspólna dla obu wariantów PDF. Repozytorium jest publiczne.

@@ -1,0 +1,29 @@
+% Wspólna okładka, potem strona tytułowa przed spisem treści.
+\begin{titlepage}
+  \thispagestyle{empty}
+  \AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+      \pdfximage width\paperwidth height\paperheight {../grafika/okladka.pdf}%
+      \pdfrefximage\pdflastximage
+    }%
+  }
+  \null
+\end{titlepage}
+
+\begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  \vspace*{\fill}
+  {\LARGE\bfseries Teoria miary\par}
+  \vspace{0.7cm}
+  {\large Skrypt z wykładów\par}
+  \vspace{0.35cm}
+  \ifchronologia
+    {\normalsize Z oznaczeniem chronologii wykładu\par}
+  \else
+    {\normalsize Bez oznaczenia chronologii wykładu\par}
+  \fi
+  \vspace{1.3cm}
+  {\large Opracowanie: Szymon Gaziński\par}
+  \vspace*{\fill}
+\end{titlepage}
