@@ -273,3 +273,106 @@ $\bigcup_{n=1}^{\infty}A_n$. Zatem
 Z dowolności $\varepsilon>0$ otrzymujemy
 \eqref{eq:zewnetrzna-podaddytywnosc}.
 \end{proof}
+
+\clearpage
+\poczatekwykladu{6}
+\znaczniklimbo
+\section{Przesunięcia i zbiór Vitaliego}
+\label{sec:vitali}
+
+\begin{fakt}[Niezmienniczość na przesunięcia]
+\label{fakt:zewnetrzna-przesuniecia}
+Dla $A\subseteq\R$ i $x\in\R$ mamy
+\begin{equation}
+  \lambda^{\ast}(A+x)=\lambda^{\ast}(A),
+  \qquad A+x=\{a+x:a\in A\}.
+  \label{eq:zewnetrzna-przesuniecia}
+\end{equation}
+\end{fakt}
+
+\begin{proof}
+Przesunięcie każdego przedziału w pokryciu $A$ o $x$ daje pokrycie
+$A+x$ o tej samej sumie długości. Stąd
+$\lambda^{\ast}(A+x)\leq\lambda^{\ast}(A)$.
+Przesunięcie z powrotem o $-x$ daje przeciwną nierówność.
+\end{proof}
+
+\begin{uwaga}[Długość przedziału w argumencie Vitaliego]
+\label{uw:dlugosc-przedzialu-vitali}
+W poniższym rozumowaniu korzystamy z równości
+$\lambda^{\ast}([0,1])=1$.
+Górne oszacowanie wynika z pokrycia samym przedziałem $[0,1]$.
+Aby uzyskać dolne, dowolne przeliczalne pokrycie tego odcinka przedziałami
+rozszerzamy do pokrycia przedziałami otwartymi, zwiększając sumę długości
+o mniej niż ustalone $\varepsilon>0$.
+Ze zwartości $[0,1]$ wybieramy podpokrycie skończone.
+Suma długości przedziałów skończonego pokrycia $[0,1]$ jest co najmniej
+równa $1$, więc suma długości wyjściowego pokrycia jest co najmniej
+$1-\varepsilon$. Z dowolności $\varepsilon$ dostajemy dolne oszacowanie.
+\end{uwaga}
+
+\begin{przyklad}[Zbiór Vitaliego i brak przeliczalnej addytywności]
+\label{prz:vitali}
+Na $[0,1]$ rozważmy relację
+\begin{equation}
+  x\sim y\quad\Longleftrightarrow\quad x-y\in\mathbb{Q}.
+  \label{eq:relacja-vitaliego}
+\end{equation}
+Jest to relacja równoważności: $x-x=0\in\mathbb{Q}$,
+z $x-y\in\mathbb{Q}$ wynika $y-x\in\mathbb{Q}$,
+a suma dwóch liczb wymiernych jest wymierna.
+Wybieramy z każdej klasy równoważności dokładnie jeden element.
+Zbiór wszystkich wybranych reprezentantów oznaczamy przez $V$.
+Wybór ten wykorzystuje aksjomat wyboru. Zbiór $V$ nazywamy zbiorem Vitaliego.
+\end{przyklad}
+
+\begin{proof}
+Ponumerujmy liczby wymierne z $[-1,1]$ bez powtórzeń:
+\[
+  [-1,1]\cap\mathbb{Q}=\{q_1,q_2,\ldots\}.
+\]
+Połóżmy $V_n=V+q_n$ oraz $S=\bigcup_{n=1}^{\infty}V_n$.
+
+\emph{Rozłączność.}
+Jeżeli $z\in V_n\cap V_m$, to $z=v+q_n=w+q_m$ dla pewnych $v,w\in V$.
+Stąd $v-w=q_m-q_n\in\mathbb{Q}$, więc $v$ i $w$ należą do tej samej
+klasy równoważności. W $V$ jest tylko jeden reprezentant tej klasy,
+zatem $v=w$, a następnie $q_n=q_m$ i $n=m$.
+Zbiory $V_n$ są więc parami rozłączne.
+
+\emph{Oszacowania sumy.}
+Ponieważ $V\subseteq[0,1]$ i $q_n\in[-1,1]$, mamy $S\subseteq[-1,2]$.
+Z drugiej strony dla każdego $y\in[0,1]$ istnieje $v\in V$ w tej samej
+klasie, więc $y-v\in[-1,1]\cap\mathbb{Q}$. Dla pewnego $n$ otrzymujemy
+$y=v+q_n\in V_n$. Zatem
+\[
+  [0,1]\subseteq S\subseteq[-1,2].
+\]
+Z monotoniczności, uwagi~\ref{uw:dlugosc-przedzialu-vitali}
+i pokrycia przedziałem $[-1,2]$ wynika
+\begin{equation}
+  1\leq\lambda^{\ast}(S)\leq3.
+  \label{eq:vitali-ograniczenia}
+\end{equation}
+
+\emph{Sprzeczność z addytywnością.}
+Z niezmienniczości na przesunięcia wszystkie $V_n$ mają tę samą miarę
+zewnętrzną $c=\lambda^{\ast}(V)$.
+Gdyby $\lambda^{\ast}$ była przeliczalnie addytywna na wszystkich
+podzbiorach $\R$, dla tej rozłącznej rodziny mielibyśmy
+\[
+  \lambda^{\ast}(S)=\sum_{n=1}^{\infty}\lambda^{\ast}(V_n)
+    =\sum_{n=1}^{\infty}c
+    =\begin{cases}
+      0, & c=0,\\
+      +\infty, & c>0.
+    \end{cases}
+\]
+Obie możliwości przeczą \eqref{eq:vitali-ograniczenia}.
+Zatem $\lambda^{\ast}$ nie jest przeliczalnie addytywna na
+$\mathcal{P}(\R)$ i nie jest miarą na całej tej rodzinie.
+Konstrukcja $V$ daje zbiór niemierzalny w sensie Lebesgue'a:
+mierzalność $V$ i jego przesunięć wymagałaby addytywności
+dla powyższej rozłącznej rodziny.
+\end{proof}
+\znaczniklimbo

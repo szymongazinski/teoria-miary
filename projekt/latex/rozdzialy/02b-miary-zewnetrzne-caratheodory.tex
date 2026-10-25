@@ -1,0 +1,301 @@
+\section{Miary zewnętrzne}
+\label{sec:miary-zewnetrzne}
+
+\begin{uwaga}[Rodzaje przedziałów w pokryciach]
+\label{uw:rodzaje-pokryc}
+W definicji~\ref{def:miara-zewnetrzna-lebesgue} otrzymamy tę samą
+wartość $\lambda^{\ast}(A)$, jeżeli dopuścimy wyłącznie przedziały
+otwarte albo wyłącznie przedziały domknięte. Możemy też dopuścić
+zbiór pusty, przyjmując $|\varnothing|=0$.
+\end{uwaga}
+
+\begin{proof}
+Ograniczenie rodziny dopuszczalnych pokryć może tylko zwiększyć infimum.
+Jeżeli $\lambda^{\ast}(A)=+\infty$, wszystkie rozważane infima są więc
+równe $+\infty$. W przeciwnym przypadku ustalmy $\varepsilon>0$
+i wybierzmy pokrycie $A$ przedziałami $I_n$ takie, że
+\[
+  \sum_{n=1}^{\infty}|I_n|<\lambda^{\ast}(A)+\varepsilon.
+\]
+Każdy $I_n$ ma skończoną długość. Możemy go zawrzeć w przedziale
+otwartym $J_n$ o długości mniejszej niż $|I_n|+\varepsilon/2^n$.
+Wtedy $J_n$ pokrywają $A$ i
+\[
+  \sum_{n=1}^{\infty}|J_n|<\lambda^{\ast}(A)+2\varepsilon.
+\]
+Infimum dla pokryć otwartych jest zatem równe $\lambda^{\ast}(A)$.
+Zastąpienie każdego $I_n$ jego domknięciem nie zmienia długości,
+więc równość zachodzi również dla pokryć domkniętych.
+Puste składniki pokrycia można zastąpić przedziałami jednopunktowymi
+długości zero; ich dopuszczenie także nie zmienia infimum.
+\end{proof}
+
+\begin{samepage}
+\begin{definicja}[Miara zewnętrzna]
+\label{def:miara-zewnetrzna}
+Miarą zewnętrzną na zbiorze $X$ nazywamy funkcję zbioru
+$\mu^{\ast}\colon\mathcal{P}(X)\to[0,+\infty]$, która spełnia warunki:
+\begin{enumerate}
+  \item $\mu^{\ast}(\varnothing)=0$;
+  \item jeżeli $A\subseteq B\subseteq X$, to
+    $\mu^{\ast}(A)\leq\mu^{\ast}(B)$;
+  \item dla dowolnych $A_n\subseteq X$ zachodzi
+    \[
+      \mu^{\ast}\left(\bigcup_{n=1}^{\infty}A_n\right)
+      \leq\sum_{n=1}^{\infty}\mu^{\ast}(A_n).
+    \]
+\end{enumerate}
+Są to kolejno: zerowanie na zbiorze pustym, monotoniczność
+i przeliczalna podaddytywność.
+\end{definicja}
+\end{samepage}
+
+\begin{uwaga}
+Funkcja $\lambda^{\ast}$ jest miarą zewnętrzną na $\R$, zgodnie
+z faktami~\ref{fakt:zewnetrzna-zero}--\ref{fakt:zewnetrzna-podaddytywnosc}.
+Miara zewnętrzna może przyjmować wartość $+\infty$.
+\end{uwaga}
+
+\section{Warunek mierzalności Carathéodory'ego}
+\label{sec:caratheodory}
+
+\begin{definicja}[Zbiór mierzalny względem miary zewnętrznej]
+\label{def:caratheodory}
+Niech $\mu^{\ast}$ będzie miarą zewnętrzną na $X$.
+Zbiór $E\subseteq X$ nazywamy $\mu^{\ast}$-mierzalnym, jeżeli
+dla każdego zbioru $A\subseteq X$ zachodzi
+\begin{equation}
+  \mu^{\ast}(A)
+  =\mu^{\ast}(A\cap E)+\mu^{\ast}(A\cap E^c).
+  \label{eq:caratheodory}
+\end{equation}
+Dopełnienie $E^c$ jest brane względem $X$.
+Równość~\eqref{eq:caratheodory} nazywamy warunkiem mierzalności
+Carathéodory'ego.
+\end{definicja}
+
+\begin{twierdzenie}[Carathéodory'ego]
+\label{tw:caratheodory}
+Rodzina $\mathcal{F}$ wszystkich zbiorów $\mu^{\ast}$-mierzalnych
+jest sigma-ciałem. Obcięcie
+\[
+  \mu=\mu^{\ast}|_{\mathcal{F}}
+  \colon\mathcal{F}\longrightarrow[0,+\infty]
+\]
+jest miarą zupełną.
+\end{twierdzenie}
+
+\begin{proof}
+\emph{Sigma-ciało.}
+Zbiór pusty jest mierzalny, bo
+$\mu^{\ast}(A\cap\varnothing)+\mu^{\ast}(A\cap X)=\mu^{\ast}(A)$.
+Warunek~\eqref{eq:caratheodory} jest symetryczny względem $E$ i $E^c$,
+więc $\mathcal{F}$ jest zamknięta na dopełnienia.
+
+Niech $E,F\in\mathcal{F}$. Dzieląc najpierw $A$ przez $E$, a potem
+$A\cap E^c$ przez $F$, otrzymujemy
+\begin{align*}
+  \mu^{\ast}(A)
+    &=\mu^{\ast}(A\cap E)+\mu^{\ast}(A\cap E^c\cap F)
+      +\mu^{\ast}(A\cap E^c\cap F^c)\\
+    &\geq\mu^{\ast}\bigl(A\cap(E\cup F)\bigr)
+      +\mu^{\ast}\bigl(A\cap(E\cup F)^c\bigr).
+\end{align*}
+W nierówności zastosowaliśmy podaddytywność do dwóch pierwszych
+składników. Przeciwna nierówność również wynika z podaddytywności,
+zatem $E\cup F\in\mathcal{F}$.
+
+Niech teraz $E_n\in\mathcal{F}$ będą parami rozłączne, a
+$S_N=\bigcup_{n=1}^{N}E_n$ i $S=\bigcup_{n=1}^{\infty}E_n$.
+Kolejne zastosowania warunku mierzalności dają
+\[
+  \mu^{\ast}(A)
+  =\sum_{n=1}^{N}\mu^{\ast}(A\cap E_n)+\mu^{\ast}(A\setminus S_N)
+  \geq\sum_{n=1}^{N}\mu^{\ast}(A\cap E_n)
+      +\mu^{\ast}(A\setminus S).
+\]
+Przechodząc z $N$ do nieskończoności i stosując podaddytywność,
+otrzymujemy
+\[
+  \mu^{\ast}(A)
+  \geq\sum_{n=1}^{\infty}\mu^{\ast}(A\cap E_n)
+       +\mu^{\ast}(A\setminus S)
+  \geq\mu^{\ast}(A\cap S)+\mu^{\ast}(A\cap S^c).
+\]
+Przeciwna nierówność jest automatyczna, więc $S\in\mathcal{F}$.
+Dla dowolnego ciągu $F_n\in\mathcal{F}$ stosujemy rozłącznienie
+\[
+  E_1=F_1,\qquad
+  E_n=F_n\setminus\bigcup_{k=1}^{n-1}F_k\quad(n\geq2).
+\]
+Zamknięcie na dopełnienia i skończone sumy zapewnia $E_n\in\mathcal{F}$,
+a równość sum obu ciągów daje $\bigcup_nF_n\in\mathcal{F}$.
+Zatem $\mathcal{F}$ jest sigma-ciałem.
+
+\emph{Miara.}
+Mamy $\mu(\varnothing)=0$.
+Dla rozłącznych $E,F\in\mathcal{F}$, stosując mierzalność $F$ do
+$A=E\cup F$, otrzymujemy
+\[
+  \mu(E\cup F)
+  =\mu^{\ast}\bigl((E\cup F)\cap F\bigr)
+   +\mu^{\ast}\bigl((E\cup F)\cap F^c\bigr)
+  =\mu(F)+\mu(E).
+\]
+Indukcyjnie dostajemy addytywność dla dowolnej skończonej rodziny.
+Dla parami rozłącznych $E_n\in\mathcal{F}$ monotoniczność daje
+\[
+  \mu\left(\bigcup_{n=1}^{\infty}E_n\right)
+  \geq\mu\left(\bigcup_{n=1}^{N}E_n\right)
+  =\sum_{n=1}^{N}\mu(E_n).
+\]
+Po przejściu do granicy otrzymujemy nierówność z sumą nieskończoną.
+Nierówność przeciwna wynika z podaddytywności $\mu^{\ast}$,
+co dowodzi przeliczalnej addytywności $\mu$.
+
+\emph{Zupełność.}
+Niech $Z\subseteq B$, gdzie $B\in\mathcal{F}$ i $\mu(B)=0$.
+Z monotoniczności $\mu^{\ast}(Z)=0$, więc dla każdego $A\subseteq X$
+mamy $\mu^{\ast}(A\cap Z)=0$ oraz
+\[
+  \mu^{\ast}(A\cap Z)+\mu^{\ast}(A\cap Z^c)
+  =\mu^{\ast}(A\cap Z^c)\leq\mu^{\ast}(A).
+\]
+Przeciwna nierówność wynika z podaddytywności.
+Zatem $Z$ jest mierzalny, czyli $Z\in\mathcal{F}$.
+\end{proof}
+
+\begin{wniosek}[Miara Lebesgue'a]
+\label{wn:miara-lebesgue}
+Niech $\mathcal{L}$ oznacza rodzinę wszystkich
+$\lambda^{\ast}$-mierzalnych podzbiorów $\R$. Wówczas
+\[
+  \lambda=\lambda^{\ast}|_{\mathcal{L}}
+\]
+jest miarą zupełną, a $(\R,\mathcal{L},\lambda)$ jest zupełną
+przestrzenią z miarą. Miarę $\lambda$ nazywamy miarą Lebesgue'a,
+a $\mathcal{L}$ --- sigma-ciałem zbiorów mierzalnych w sensie Lebesgue'a.
+\end{wniosek}
+
+\begin{uwaga}
+Zbiór Vitaliego $V$ z przykładu~\ref{prz:vitali} nie należy do
+$\mathcal{L}$. Gdyby był mierzalny, mierzalne byłyby też jego
+przesunięcia (jak wykażemy poniżej), a addytywność $\lambda$
+prowadziłaby do otrzymanej tam sprzeczności.
+\end{uwaga}
+
+\section{Własności miary Lebesgue'a}
+\label{sec:wlasnosci-lebesgue}
+
+\begin{samepage}
+\begin{fakt}
+\label{fakt:wlasnosci-lebesgue}
+Miara Lebesgue'a i jej miara zewnętrzna mają następujące własności:
+\begin{enumerate}
+  \item Jeżeli $E\in\mathcal{L}$ i $x\in\R$, to $E+x\in\mathcal{L}$
+    i $\lambda(E+x)=\lambda(E)$.
+  \item Każdy zbiór przeliczalny $F\subseteq\R$ należy do
+    $\mathcal{L}$ i ma miarę zero. W szczególności
+    $\lambda(\{x\})=0$ dla $x\in\R$.
+  \item Dla każdego przedziału $I\subseteq\R$ zachodzi
+    $\lambda^{\ast}(I)=|I|$.
+  \item Każda półprosta $(-\infty,b)$, gdzie $b\in\R$,
+    należy do $\mathcal{L}$.
+  \item $\mathcal{B}(\R)\subseteq\mathcal{L}$.
+\end{enumerate}
+\end{fakt}
+\end{samepage}
+
+\begin{proof}
+\emph{Ad 1.}
+Niech $E\in\mathcal{L}$. Dla dowolnego $A\subseteq\R$ stosujemy
+mierzalność $E$ do $A-x$. Z niezmienniczości $\lambda^{\ast}$
+na przesunięcia wynika
+\begin{align*}
+  \lambda^{\ast}(A)
+    &=\lambda^{\ast}(A-x)\\
+    &=\lambda^{\ast}\bigl((A-x)\cap E\bigr)
+      +\lambda^{\ast}\bigl((A-x)\cap E^c\bigr)\\
+    &=\lambda^{\ast}\bigl(A\cap(E+x)\bigr)
+      +\lambda^{\ast}\bigl(A\cap(E+x)^c\bigr).
+\end{align*}
+Zatem $E+x\in\mathcal{L}$ i
+$\lambda(E+x)=\lambda^{\ast}(E+x)=\lambda^{\ast}(E)=\lambda(E)$.
+
+\emph{Ad 2.}
+Przedział $[x,x]$ pokrywa $\{x\}$ i ma długość zero,
+więc $\lambda^{\ast}(\{x\})=0$.
+Przeliczalna podaddytywność daje $\lambda^{\ast}(F)=0$
+dla każdego przeliczalnego $F$.
+Każdy zbiór miary zewnętrznej zero jest mierzalny:
+dla dowolnego $A$ jeden składnik warunku Carathéodory'ego jest zerowy,
+a drugi nie przekracza $\lambda^{\ast}(A)$; przeciwną nierówność
+daje podaddytywność. Stąd $F\in\mathcal{L}$ i $\lambda(F)=0$.
+
+\emph{Ad 3.}
+Dla przedziału ograniczonego $I$ o końcach $a\leq b$ pokrycie nim samym
+daje $\lambda^{\ast}(I)\leq b-a$.
+Dla odcinka domkniętego $[a,b]$ powtarzamy argument
+z uwagi~\ref{uw:dlugosc-przedzialu-vitali}:
+dowolne pokrycie rozszerzamy do otwartego z przyrostem sumy długości
+mniejszym niż $\varepsilon$, wybieramy podpokrycie skończone
+i korzystamy z tego, że suma jego długości jest co najmniej $b-a$.
+Z dowolności $\varepsilon>0$ wynika
+$\lambda^{\ast}([a,b])\geq b-a$.
+
+Jeżeli $a<b$, to dla $0<\delta<(b-a)/2$ odcinek
+$[a+\delta,b-\delta]$ zawiera się w $I$. Monotoniczność daje
+\[
+  b-a-2\delta\leq\lambda^{\ast}(I)\leq b-a.
+\]
+Przejście z $\delta$ do zera dowodzi równości dla wszystkich rodzajów
+końców. Przypadek jednopunktowy wynika z punktu 2.
+Przedział nieograniczony zawiera odcinki domknięte o dowolnie dużej
+długości, zatem jego miara zewnętrzna jest nieskończona.
+
+\emph{Ad 4.}
+Ustalmy $b\in\R$, $E=(-\infty,b)$ i dowolny $A\subseteq\R$.
+Oznaczmy
+\[
+  A_1=A\cap(-\infty,b),\qquad A_2=A\cap[b,+\infty).
+\]
+Podaddytywność daje
+$\lambda^{\ast}(A)\leq\lambda^{\ast}(A_1)+\lambda^{\ast}(A_2)$.
+Wystarczy wykazać przeciwną nierówność.
+Gdy $\lambda^{\ast}(A)=+\infty$, jest ona automatyczna.
+Załóżmy więc, że $\lambda^{\ast}(A)<+\infty$, i ustalmy
+$\varepsilon>0$. Na mocy uwagi~\ref{uw:rodzaje-pokryc} istnieje
+pokrycie $A$ przedziałami otwartymi $I_n$ takie, że
+\[
+  \sum_{n=1}^{\infty}|I_n|<\lambda^{\ast}(A)+\varepsilon.
+\]
+Połóżmy
+\[
+  I_n^-=I_n\cap(-\infty,b),\qquad
+  I_n^+=I_n\cap[b,+\infty).
+\]
+Są to przedziały lub zbiory puste, przy czym
+$|I_n|=|I_n^-|+|I_n^+|$.
+Rodziny $(I_n^-)$ i $(I_n^+)$ pokrywają odpowiednio $A_1$ i $A_2$.
+W definicji miary zewnętrznej wolno użyć także tych przedziałów
+i pustych składników, więc
+\begin{align*}
+  \lambda^{\ast}(A_1)+\lambda^{\ast}(A_2)
+    &\leq\sum_{n=1}^{\infty}|I_n^-|+\sum_{n=1}^{\infty}|I_n^+|\\
+    &=\sum_{n=1}^{\infty}\bigl(|I_n^-|+|I_n^+|\bigr)
+      =\sum_{n=1}^{\infty}|I_n|\\
+    &<\lambda^{\ast}(A)+\varepsilon.
+\end{align*}
+Z dowolności $\varepsilon>0$ otrzymujemy żądaną nierówność.
+Zatem $E\in\mathcal{L}$.
+
+\emph{Ad 5.}
+Z twierdzenia~\ref{tw:generatory-borelowskie} i punktu 4 wynika
+\[
+  \mathcal{B}(\R)
+  =\sigma\bigl(\{(-\infty,b):b\in\R\}\bigr)
+  \subseteq\mathcal{L},
+\]
+ponieważ $\mathcal{L}$ jest sigma-ciałem zawierającym wszystkie
+wskazane półproste.
+\end{proof}
