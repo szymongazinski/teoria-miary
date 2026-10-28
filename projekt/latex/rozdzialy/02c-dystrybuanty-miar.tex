@@ -1,0 +1,155 @@
+\poczatekwykladu{7}
+\section{Dystrybuanty miar}
+\label{sec:dystrybuanty-miar}
+
+Konstrukcja Carathéodory'ego dała nam przestrzeń z miarą
+$(\R,\mathcal{L},\lambda)$, przy czym
+$\mathcal{B}(\R)\subseteq\mathcal{L}$. Obcięcie $\lambda$ do
+$\mathcal{B}(\R)$ również jest miarą. Rozważymy teraz inne miary
+na prostej oraz ich opis za pomocą funkcji rzeczywistych.
+
+\begin{definicja}[Dystrybuanta miary]
+\label{def:dystrybuanta-miary}
+Niech $\mu$ będzie miarą na $\mathcal{B}(\R)$, skończoną na każdym
+ograniczonym przedziale. Jej dystrybuantą nazywamy funkcję
+$F_\mu\colon\R\to\R$ określoną wzorem
+\begin{equation}
+  F_\mu(t)=
+  \begin{cases}
+    \mu([0,t]), & t\geq0,\\
+    -\mu((t,0)), & t<0.
+  \end{cases}
+  \label{eq:dystrybuanta-miary}
+\end{equation}
+\end{definicja}
+
+\begin{fakt}[Własności dystrybuanty]
+\label{fakt:dystrybuanta-wlasnosci}
+Dystrybuanta $F_\mu$ ma następujące własności:
+\begin{enumerate}
+  \item jest niemalejąca;
+  \item jest prawostronnie ciągła, czyli dla każdego $t_0\in\R$
+    \[
+      \lim_{t\to t_0^+}F_\mu(t)=F_\mu(t_0);
+    \]
+  \item $\displaystyle\lim_{t\to0^-}F_\mu(t)=0$.
+\end{enumerate}
+Ponadto dla $a<b$ zachodzi
+\begin{equation}
+  \mu((a,b])=F_\mu(b)-F_\mu(a).
+  \label{eq:miara-przez-dystrybuante}
+\end{equation}
+\end{fakt}
+
+\begin{proof}
+Równość~\eqref{eq:miara-przez-dystrybuante} wynika z addytywności:
+dla $0\leq a<b$ odejmujemy miary $[0,b]$ i $[0,a]$, dla $a<b<0$
+rozkładamy $(a,0)=(a,b]\cup(b,0)$, a dla $a<0\leq b$ używamy
+$(a,b]=(a,0)\cup[0,b]$. Nieujemność miary daje monotoniczność $F_\mu$.
+Jeżeli $t_n\downarrow t_0$ i $t_n>t_0$, to
+$(t_0,t_n]\downarrow\varnothing$, zatem
+$F_\mu(t_n)-F_\mu(t_0)=\mu((t_0,t_n])\to0$.
+Stosujemy tu ciągłość z góry do miary obciętej do ograniczonego
+przedziału. Podobnie dla $t_n\uparrow0$, $t_n<0$, mamy
+$(t_n,0)\downarrow\varnothing$ i $F_\mu(t_n)\to0$.
+\end{proof}
+
+\begin{twierdzenie}[Odpowiedniość miar i dystrybuant]
+\label{tw:miary-dystrybuanty}
+Niech $\mathcal{D}$ oznacza rodzinę wszystkich funkcji
+$F\colon\R\to\R$, które są niemalejące, prawostronnie ciągłe
+i spełniają $\lim_{t\to0^-}F(t)=0$.
+Odwzorowanie $\mu\mapsto F_\mu$ jest bijekcją między rodziną miar
+na $\mathcal{B}(\R)$, skończonych na przedziałach ograniczonych,
+a rodziną $\mathcal{D}$. Miara odpowiadająca funkcji $F$ spełnia
+\[
+  \mu((a,b])=F(b)-F(a)\qquad(a<b).
+\]
+\end{twierdzenie}
+
+\begin{proof}[Idea dowodu]
+Dla danej funkcji $F\in\mathcal{D}$ przypisujemy przedziałom wartości
+$m((a,b])=F(b)-F(a)$. Następnie definiujemy miarę zewnętrzną przez
+pokrycia takimi przedziałami i stosujemy konstrukcję Carathéodory'ego.
+Otrzymana miara borelowska ma wskazane wartości na przedziałach.
+Jest przez nie wyznaczona jednoznacznie. Normalizacja
+$\lim_{t\to0^-}F(t)=0$ ustala stałą addytywną w dystrybuancie.
+\end{proof}
+
+\begin{samepage}
+\begin{przyklad}[Miara Lebesgue'a]
+\label{prz:dystrybuanta-lebesgue}
+Dla miary Lebesgue'a obciętej do $\mathcal{B}(\R)$ mamy
+\[
+  F_\lambda(t)=
+  \begin{cases}
+    t, & t\geq0,\\
+    -(-t)=t, & t<0.
+  \end{cases}
+\]
+Zatem $F_\lambda(t)=t$ na całej prostej.
+\end{przyklad}
+
+\begin{przyklad}[Miara Diraca w zerze]
+\label{prz:dystrybuanta-diraca}
+Dla miary Diraca $\delta_0$ dystrybuanta ma postać
+\[
+  F_{\delta_0}(t)=
+  \begin{cases}
+    0, & t<0,\\
+    1, & t\geq0.
+  \end{cases}
+\]
+W zerze występuje skok, a wartość w tym punkcie jest równa $1$,
+zgodnie z prawostronną ciągłością. Wykresy obu dystrybuant
+przedstawia rysunek~\ref{fig:dystrybuanty-lebesgue-dirac}.
+\end{przyklad}
+\end{samepage}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{dystrybuanty-lebesgue-dirac.pdf}
+  \caption{Dystrybuanty miary Lebesgue'a i miary Diraca w zerze.}
+  \label{fig:dystrybuanty-lebesgue-dirac}
+\end{figure}
+
+\newpage
+\begin{przyklad}[Miara skupiona w trzech punktach]
+\label{prz:dystrybuanta-trzy-punkty}
+Rozważmy miarę z tablicy
+\[
+  \mu=\frac14\delta_{-1}+\frac12\delta_0+\frac14\delta_1.
+\]
+Dla $t<0$ przedział $(t,0)$ nie zawiera punktu $0$.
+Zawiera punkt $-1$ dokładnie wtedy, gdy $t<-1$.
+Dla $t\geq0$ przedział $[0,t]$ zawiera punkt $0$, a punkt $1$
+dokładnie wtedy, gdy $t\geq1$. Stąd
+\[
+  F_\mu(t)=
+  \begin{cases}
+    -\frac14, & t<-1,\\
+    0, & -1\leq t<0,\\
+    \frac12, & 0\leq t<1,\\
+    \frac34, & t\geq1.
+  \end{cases}
+\]
+Wykres przedstawia rysunek~\ref{fig:dystrybuanty-atomowa-szkic} po lewej.
+Normalizacja z definicji~\ref{def:dystrybuanta-miary} daje tu
+ujemne wartości dla $t<-1$.
+\end{przyklad}
+
+\begin{przyklad}[Dystrybuanta miary na zbiorze Cantora]
+\label{prz:dystrybuanta-cantora}
+Trzeci wykres z tablicy przedstawia dystrybuantę miary skupionej
+na zbiorze Cantora w $[0,1]$.
+Na rysunku~\ref{fig:dystrybuanty-atomowa-szkic} po prawej odtworzono
+jej schematyczny wykres. Widoczne są poziome fragmenty,
+w szczególności między $1/3$ a $2/3$, na wysokości $1/2$.
+\end{przyklad}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.98\textwidth]{dystrybuanty-atomowa-szkic.pdf}
+  \caption{Dystrybuanta miary z trzema atomami oraz dystrybuanta miary na zbiorze Cantora (schemat).}
+  \label{fig:dystrybuanty-atomowa-szkic}
+\end{figure}

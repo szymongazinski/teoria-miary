@@ -24,6 +24,11 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Wykład 6 zaczyna się przed sekcją 2.8, po czerwonej kresce za dowodem
   podaddytywności miary zewnętrznej. Obejmuje też miary zewnętrzne,
   warunek Carathéodory'ego i własności miary Lebesgue'a (sekcje 2.9–2.11).
+- Wykład 7 zaczyna się od dystrybuant miar w sekcji 2.12.
+  Nagłówek „Funkcje mierzalne” z IMG_7026 rozpoczyna rozdział 3.
+  Zachowuj normalizację dystrybuant z tablicy: granica w zerze z lewej
+  wynosi zero, a F_mu(0)=mu({0}); nie zastępuj jej konwencją probabilistyczną.
+  Materiały kończą się dowodem mierzalności f+c i cf, po przypadku c=0.
 - W obu wariantach umieszczaj nienumerowany znacznik „Limbo” przed sekcją
   2.8 i drugi, o tym samym brzmieniu, po dowodzie braku przeliczalnej
   addytywności lambda* na P(R). Oba mają własne wpisy w spisie treści.
@@ -64,7 +69,7 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   Oba najnowsze PDF-y mają być dostępne obok folderu `projekt/` i wersjonowane
   w głównym katalogu repozytorium. Nie twórz dodatkowych kopii w projekcie.
 - Wersjonuj źródła, materiały, grafikę i aktualne PDF-y. Repozytorium
-  `https://github.com/szymongazinski/teoria-miary` ma być PUBLICZNE,
+  `https://github.com/szymongazinski/teoria-miary-skrypt` ma być PUBLICZNE,
   zgodnie z poleceniem użytkownika. Ta zasada obowiązuje także przy przyszłych
   edycjach.
   Nie zmieniaj widoczności bez nowego, wyraźnego polecenia użytkownika.

@@ -6,7 +6,7 @@ i **[z oznaczeniami wykładów](../Teoria-miary-wyklady.pdf)** są dostępne
 w katalogu przedmiotu, obok folderu `projekt/`. Ten sam układ obowiązuje
 lokalnie i w głównym katalogu repozytorium na GitHubie.
 
-Publiczne repozytorium: [szymongazinski/teoria-miary](https://github.com/szymongazinski/teoria-miary).
+Publiczne repozytorium: [szymongazinski/teoria-miary-skrypt](https://github.com/szymongazinski/teoria-miary-skrypt).
 Przy przyszłych aktualizacjach zachowuj publiczną widoczność; jej zmiana
 wymaga nowego, wyraźnego polecenia użytkownika.
 
@@ -60,7 +60,10 @@ Buduj przez `kompiluj.ps1`, aby zaktualizować oba pliki.
 - Rozdział 1 „Struktury na zbiorach”: od definicji ciała
   i sigma-ciała (sekcja 1.1), następnie ich własności i dalsze pojęcia.
 - Rozdział 2 „Miara”: funkcje zbioru, addytywność, definicja miary,
-  przestrzeń z miarą oraz podstawowe własności miary.
+  przestrzeń z miarą, własności miar, konstrukcja miary Lebesgue'a
+  oraz dystrybuanty miar.
+- Rozdział 3 „Funkcje mierzalne”: równoważne warunki mierzalności,
+  przeciwobrazy przedziałów i zbiorów borelowskich oraz działania na funkcjach.
 
 Podział obowiązuje w obu wariantach. Wykład 1 obejmuje także początek
 rozdziału 1; Wykład 2 zaczyna się przy własnościach sigma-ciał.
@@ -75,6 +78,10 @@ Lebesgue'a (sekcje 2.4–2.7).
 Wykład 6 zaczyna się przed sekcją 2.8: obejmuje przesunięcia i zbiór
 Vitaliego, następnie ogólną definicję miary zewnętrznej, warunek
 Carathéodory'ego, konstrukcję miary Lebesgue'a i jej własności.
+Wykład 7 zaczyna się od dystrybuant miar (sekcja 2.12), a następnie
+przechodzi do rozdziału 3 „Funkcje mierzalne”. Zdjęcia IMG_7022–IMG_7033
+obejmują także przykłady dystrybuant i dowody kryteriów mierzalności.
+Ostatnia fotografia kończy rozpatrywanie mnożenia funkcji przez stałą.
 
 W obu wariantach przed sekcją 2.8 znajduje się nienumerowany znacznik
 „Limbo”. Drugi znacznik „Limbo” zamyka ten fragment po dowodzie braku

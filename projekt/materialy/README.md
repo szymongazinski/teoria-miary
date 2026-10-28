@@ -281,6 +281,67 @@ zapisano w folderze `2026-10-16/`, z zachowaniem nazw i kolejności:
   Podział rozdziałów i dotychczasowe numery elementów pozostają zachowane.
   Daty materiałów nie występują w PDF-ach.
 
+## Wykład 7: materiały otrzymane 28 października 2026 r.
+
+Niezmienione kopie dziesięciu zdjęć z `C:\Users\szymo\AppData\Local\Temp\`
+zapisano w `2026-10-28/`, z zachowaniem nazw i kolejności:
+
+- `IMG_7022.jpeg` - przypomnienie miary Lebesgue'a, definicja dystrybuanty
+  miary i przykład F_lambda(t)=t.
+- `IMG_7024.jpeg` - powtórzenie poprzedniej tablicy, własności dystrybuant,
+  bijekcja z miarami borelowskimi skończonymi na ograniczonych przedziałach,
+  idea konstrukcji przez pokrycia i twierdzenie Carathéodory'ego.
+- `IMG_7025.jpeg` - przykłady: delta_0, miara z wagami 1/4, 1/2, 1/4
+  w punktach -1, 0, 1 oraz dystrybuanta miary na zbiorze Cantora.
+- `IMG_7026.jpeg` - nagłówek „Funkcje mierzalne” i cztery równoważne warunki.
+- `IMG_7027.jpeg` - dowód implikacji 1=>2 i 2=>3 oraz wskazanie analogii
+  dla pozostałych implikacji.
+- `IMG_7028.jpeg` - powtórzenie końca dowodu, definicja funkcji mierzalnej,
+  wartości rozszerzone i przeciwobrazy przedziałów domkniętych.
+- `IMG_7029.jpeg` - przeciwobrazy singletonów i nieskończoności,
+  pozostałe przedziały i kryterium borelowskie.
+- `IMG_7030.jpeg` - dowód kryterium borelowskiego przez sigma-ciało
+  zbiorów o mierzalnym przeciwobrazie.
+- `IMG_7032.jpeg` - powtórzenie końca dowodu, działania na funkcjach,
+  dowód dla f+c i cf w przypadkach c>0 i c<0.
+- `IMG_7033.jpeg` - dokończenie przypadku c=0.
+
+### Zakres i decyzje redakcyjne
+
+- Nowy materiał stanowi wykład 7. Początek umieszczono przed sekcją 2.12
+  „Dystrybuanty miar”. Rozdział 3 „Funkcje mierzalne” zaczyna się
+  w miejscu odpowiadającego mu nagłówka na IMG_7026. Zachowano osobne
+  liczniki każdego rodzaju elementów i dotychczasowy podział rozdziałów.
+- Zachowano definicję F_mu(t)=mu([0,t]) dla t>=0 oraz -mu((t,0)) dla t<0.
+  W szczególności F_mu(0)=mu({0}) i granica F_mu w zerze z lewej wynosi 0.
+  W przykładzie z trzema atomami wartości to -1/4, 0, 1/2, 3/4.
+  Nie zastąpiono tej normalizacji dystrybuantą probabilistyczną.
+- Wartości miary na przedziałach zapisano jako mu((a,b])=F(b)-F(a).
+  W dolnej linijce idei dowodu na IMG_7024 występuje omyłkowy plus;
+  użyto różnicy zgodnej ze wzorem nad definicją i nieujemnością miary.
+- Doprecyzowano założenie skończoności miary na przedziałach ograniczonych
+  z tablicy, aby F przyjmowała wartości rzeczywiste. Krótko uzasadniono
+  własności dystrybuanty za pomocą rozkładów przedziałów i ciągłości miary.
+  Twierdzenie o bijekcji pozostawiono z ideą dowodu, zgodnie z materiałami.
+- Użytkownik doprecyzował, że trzeci wykres z IMG_7025 przedstawia
+  dystrybuantę miary na zbiorze Cantora. Tak go podpisano i odtworzono
+  schematycznie, z poziomym fragmentem między 1/3 a 2/3 na wysokości 1/2.
+  Do narysowania ciągłej krzywej użyto skończonego przybliżenia wykresu;
+  nie dodano konstrukcji miary ani jej własności spoza materiałów.
+- Rozpisano wszystkie cztery implikacje równoważności warunków
+  mierzalności; dwa ostatnie kroki rozwijają analogię wskazaną na tablicy.
+  Przeciwobrazy odcinków i singletonów oraz dowód kryterium borelowskiego
+  zachowują argumenty z fotografii. Dopisano tylko analogiczny przeciwobraz
+  -infinity do pokazanego przypadku +infinity.
+- Twierdzenie o działaniach przepisano w całości, lecz fragment dowodu
+  obejmuje wyłącznie przesunięcie i mnożenie przez stałą, w tym c=0,
+  tak jak dostarczone zdjęcia. Nie dopisano dalszej części wykładu.
+  „Tam, gdzie iloraz jest określony” doprecyzowano sigma-ciałem śladowym
+  na zbiorze, gdzie g nie jest zerem.
+- Odtworzono wykresy jako osobne źródła TikZ. Zdjęć powtarzających
+  wcześniejszy fragment nie transkrybowano ponownie. Daty pozostają
+  wyłącznie w dokumentacji materiałów i ścieżkach.
+
 ## Okładka
 
 Zatwierdzona ilustracja znajduje się w `grafika/okladka-kreskowkowa.png`.

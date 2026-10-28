@@ -1,0 +1,205 @@
+\chapter{Funkcje mierzalne}
+\label{chap:funkcje-mierzalne}
+
+\section{Równoważne warunki mierzalności}
+\label{sec:warunki-mierzalnosci-funkcji}
+
+W tym rozdziale $(X,\mathcal{F})$ jest przestrzenią mierzalną.
+Dla funkcji $f\colon X\to\R$ i zbioru $B\subseteq\R$ oznaczamy
+\[
+  f^{-1}(B)=\{x\in X:f(x)\in B\}.
+\]
+Jest to przeciwobraz zbioru; zapis nie wymaga odwracalności funkcji.
+
+\begin{twierdzenie}[Równoważne warunki]
+\label{tw:warunki-mierzalnosci-funkcji}
+Dla funkcji $f\colon X\to\R$ następujące warunki są równoważne:
+\begin{enumerate}
+  \item dla każdego $a\in\R$ zbiór
+    $\{x\in X:f(x)>a\}=f^{-1}((a,+\infty))$ należy do $\mathcal{F}$;
+  \item dla każdego $a\in\R$ zbiór
+    $\{x\in X:f(x)\geq a\}$ należy do $\mathcal{F}$;
+  \item dla każdego $a\in\R$ zbiór
+    $\{x\in X:f(x)<a\}$ należy do $\mathcal{F}$;
+  \item dla każdego $a\in\R$ zbiór
+    $\{x\in X:f(x)\leq a\}=f^{-1}((-\infty,a])$ należy do $\mathcal{F}$.
+\end{enumerate}
+\end{twierdzenie}
+
+\begin{proof}
+\emph{$1\Rightarrow2$.} Dla każdego $a\in\R$ zachodzi
+\[
+  \{x\in X:f(x)\geq a\}
+  =\bigcap_{n=1}^{\infty}\left\{x\in X:f(x)>a-\frac1n\right\}.
+\]
+Każdy zbiór po prawej należy do $\mathcal{F}$ na mocy warunku 1,
+a sigma-ciało jest zamknięte na przeliczalne przekroje.
+
+\emph{$2\Rightarrow3$.} Korzystamy z dopełnienia względem $X$:
+\[
+  \{x\in X:f(x)<a\}
+  =X\setminus\{x\in X:f(x)\geq a\}\in\mathcal{F}.
+\]
+
+\emph{$3\Rightarrow4$.} Analogicznie do pierwszego przejścia mamy
+\[
+  \{x\in X:f(x)\leq a\}
+  =\bigcap_{n=1}^{\infty}\left\{x\in X:f(x)<a+\frac1n\right\}
+  \in\mathcal{F}.
+\]
+
+\emph{$4\Rightarrow1$.} Ponownie bierzemy dopełnienie:
+\[
+  \{x\in X:f(x)>a\}
+  =X\setminus\{x\in X:f(x)\leq a\}\in\mathcal{F}.
+\]
+\end{proof}
+
+\begin{definicja}[Funkcja mierzalna]
+\label{def:funkcja-mierzalna}
+Funkcję $f\colon X\to\R$ nazywamy mierzalną względem $\mathcal{F}$,
+jeżeli spełnia dowolny, a więc każdy z warunków
+twierdzenia~\ref{tw:warunki-mierzalnosci-funkcji}.
+\end{definicja}
+
+\begin{uwaga}[Wartości w prostej rozszerzonej]
+\label{uw:funkcja-mierzalna-rozszerzona}
+Tak samo definiujemy mierzalność funkcji
+$f\colon X\to\Rbar=[-\infty,+\infty]$:
+sprawdzamy te same zbiory poziomicowe dla wszystkich $a\in\R$.
+Dowód równoważności czterech warunków pozostaje taki sam.
+\end{uwaga}
+
+\section{Przeciwobrazy i kryterium borelowskie}
+\label{sec:przeciwobrazy-borelowskie}
+
+\begin{fakt}[Przedziały domknięte]
+\label{fakt:przeciwobraz-domknietego}
+Jeżeli $f\colon X\to\R$ jest mierzalna, to dla $a\leq b$
+\[
+  f^{-1}([a,b])\in\mathcal{F}.
+\]
+\end{fakt}
+
+\begin{proof}
+Przeciwobraz zachowuje przekroje, zatem
+\begin{align*}
+  f^{-1}([a,b])
+    &=f^{-1}\bigl((-\infty,b]\cap[a,+\infty)\bigr)\\
+    &=\{x\in X:f(x)\leq b\}\cap\{x\in X:f(x)\geq a\}
+      \in\mathcal{F}.
+\end{align*}
+\end{proof}
+
+\begin{wniosek}[Przeciwobraz punktu]
+\label{wn:przeciwobraz-punktu}
+Dla funkcji mierzalnej $f$ i każdego $a\in\R$ mamy
+$f^{-1}(\{a\})\in\mathcal{F}$.
+\end{wniosek}
+
+\begin{proof}
+Wystarczy wziąć $a=b$ w fakcie~\ref{fakt:przeciwobraz-domknietego}.
+\end{proof}
+
+\begin{uwaga}
+Dla mierzalnej funkcji $f\colon X\to\Rbar$ mierzalne są również
+przeciwobrazy wartości nieskończonych. W szczególności
+\[
+  f^{-1}(\{+\infty\})
+  =\bigcap_{n=1}^{\infty}\{x\in X:f(x)\geq n\}\in\mathcal{F}.
+\]
+Dla $-\infty$ używamy analogicznie przekroju zbiorów
+$\{x\in X:f(x)\leq-n\}$.
+\end{uwaga}
+
+\begin{fakt}[Pozostałe rodzaje przedziałów]
+\label{fakt:przeciwobrazy-przedzialow}
+Dla funkcji mierzalnej $f\colon X\to\R$ i $a<b$ zbiory
+\[
+  f^{-1}((a,b)),\qquad f^{-1}((a,b]),\qquad f^{-1}([a,b))
+\]
+należą do $\mathcal{F}$.
+\end{fakt}
+
+\begin{proof}
+Każdy z tych przedziałów otrzymujemy z $[a,b]$, usuwając odpowiednie
+końce. Przykładowo
+\[
+  f^{-1}((a,b])=f^{-1}([a,b])\setminus f^{-1}(\{a\})
+  \in\mathcal{F}.
+\]
+Dla pozostałych dwóch przypadków usuwamy odpowiednio oba końce
+albo tylko $b$.
+\end{proof}
+
+\begin{twierdzenie}[Kryterium borelowskie]
+\label{tw:mierzalnosc-borelowska}
+Funkcja $f\colon X\to\R$ jest mierzalna wtedy i tylko wtedy,
+gdy dla każdego $B\in\mathcal{B}(\R)$ zachodzi
+\[
+  f^{-1}(B)\in\mathcal{F}.
+\]
+\end{twierdzenie}
+
+\begin{proof}
+\emph{$\Leftarrow$.} Każda półprosta $(a,+\infty)$ jest zbiorem
+borelowskim, zatem spełniony jest warunek 1
+twierdzenia~\ref{tw:warunki-mierzalnosci-funkcji}.
+
+\emph{$\Rightarrow$.} Załóżmy, że $f$ jest mierzalna, i połóżmy
+\[
+  \mathcal{A}=\{B\subseteq\R:f^{-1}(B)\in\mathcal{F}\}.
+\]
+Rodzina $\mathcal{A}$ jest sigma-ciałem. Istotnie,
+$f^{-1}(\varnothing)=\varnothing\in\mathcal{F}$, a tożsamości
+\[
+  f^{-1}(\R\setminus B)=X\setminus f^{-1}(B),\qquad
+  f^{-1}\left(\bigcup_{n=1}^{\infty}B_n\right)
+  =\bigcup_{n=1}^{\infty}f^{-1}(B_n)
+\]
+zapewniają zamknięcie na dopełnienia i przeliczalne sumy.
+Z mierzalności $f$ wynika, że $(a,+\infty)\in\mathcal{A}$ dla każdego
+$a\in\R$. Półproste te generują $\mathcal{B}(\R)$, więc
+$\mathcal{B}(\R)\subseteq\mathcal{A}$. Jest to dokładnie żądany warunek.
+\end{proof}
+
+\section{Działania na funkcjach mierzalnych}
+\label{sec:dzialania-na-mierzalnych}
+
+\begin{twierdzenie}
+\label{tw:dzialania-na-mierzalnych}
+Jeżeli $f,g\colon X\to\R$ są mierzalne i $c\in\R$, to funkcje
+\[
+  f+c,\qquad cf,\qquad f+g,\qquad f-g,\qquad fg
+\]
+są mierzalne. Iloraz $f/g$ jest mierzalny na zbiorze
+$D=\{x\in X:g(x)\neq0\}$ z sigma-ciałem
+$\mathcal{F}|_D=\{A\cap D:A\in\mathcal{F}\}$.
+\end{twierdzenie}
+
+\begin{proof}[Dowód dla przesunięcia i mnożenia przez stałą]
+Ustalmy $a\in\R$. Dla przesunięcia mamy
+\[
+  \{x\in X:f(x)+c>a\}
+  =\{x\in X:f(x)>a-c\}\in\mathcal{F}.
+\]
+Jeżeli $c>0$, to
+\[
+  \{x\in X:cf(x)>a\}
+  =\{x\in X:f(x)>a/c\}\in\mathcal{F}.
+\]
+Jeżeli $c<0$, to po podzieleniu nierówności zmienia się jej zwrot:
+\[
+  \{x\in X:cf(x)>a\}
+  =\{x\in X:f(x)<a/c\}\in\mathcal{F}.
+\]
+Wreszcie, dla $c=0$ otrzymujemy
+\[
+  \{x\in X:cf(x)>a\}
+  =\begin{cases}
+    \varnothing, & a\geq0,\\
+    X, & a<0.
+  \end{cases}
+\]
+Oba zbiory należą do $\mathcal{F}$.
+\end{proof}

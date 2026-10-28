@@ -1,0 +1,62 @@
+\documentclass[tikz,border=9pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[OT4,plmath]{polski}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[font=\large,>=stealth]
+  \begin{scope}[xscale=1.25,yscale=3.4]
+    \node at (0.15,1.3) {$\mu=\frac14\delta_{-1}+\frac12\delta_0+\frac14\delta_1$};
+    \draw[->] (-2,-0.02)--(2.2,-0.02) node[right] {$t$};
+    \draw[->] (0,-0.42)--(0,0.93) node[above left=2pt] {$F_\mu$};
+    \draw[very thick] (-1.9,-0.25)--(-1,-0.25);
+    \draw[very thick] (-1,0)--(0,0);
+    \draw[very thick] (0,0.5)--(1,0.5);
+    \draw[very thick] (1,0.75)--(2,0.75);
+    \foreach \x/\y in {-1/-0.25,0/0,1/0.5}
+      \node[circle,draw,fill=white,thick,inner sep=0pt,minimum size=5pt] at (\x,\y) {};
+    \foreach \x/\y in {-1/0,0/0.5,1/0.75}
+      \node[circle,fill,inner sep=0pt,minimum size=5pt] at (\x,\y) {};
+    \node[below=5pt] at (-1,0) {$-1$};
+    \node[below right=3pt] at (0,0) {$0$};
+    \node[below=7pt] at (1,0) {$1$};
+    \draw (1,-0.045)--(1,0.015);
+    \node[left=3pt] at (0,-0.25) {$-\frac14$};
+    \node[left=3pt] at (0,0.5) {$\frac12$};
+    \node[left=3pt] at (0,0.75) {$\frac34$};
+    \draw (-0.035,-0.25)--(0.035,-0.25);
+    \draw (-0.035,0.75)--(0.035,0.75);
+  \end{scope}
+  \begin{scope}[xshift=8cm,xscale=4.5,yscale=3.4]
+    \node at (0.5,1.3) {Miara na zbiorze Cantora};
+    \draw[->] (-0.12,0)--(1.17,0) node[right] {$t$};
+    \draw[->] (0,-0.08)--(0,1.0);
+    % Skończone przybliżenie służy wyłącznie odtworzeniu szkicu wykresu.
+    \draw[very thick]
+      (-0.1,0)--(0,0)
+      --(0.012346,0.0625)--(0.024691,0.0625)
+      --(0.037037,0.125)--(0.074074,0.125)
+      --(0.086420,0.1875)--(0.098765,0.1875)
+      --(0.111111,0.25)--(0.222222,0.25)
+      --(0.234568,0.3125)--(0.246914,0.3125)
+      --(0.259259,0.375)--(0.296296,0.375)
+      --(0.308642,0.4375)--(0.320988,0.4375)
+      --(0.333333,0.5)--(0.666667,0.5)
+      --(0.679012,0.5625)--(0.691358,0.5625)
+      --(0.703704,0.625)--(0.740741,0.625)
+      --(0.753086,0.6875)--(0.765432,0.6875)
+      --(0.777778,0.75)--(0.888889,0.75)
+      --(0.901235,0.8125)--(0.913580,0.8125)
+      --(0.925926,0.875)--(0.962963,0.875)
+      --(0.975309,0.9375)--(0.987654,0.9375)
+      --(1,1)--(1.1,1);
+    \foreach \x/\lab in {0/0,0.3333/{\frac13},0.6667/{\frac23},1/1} {
+      \draw (\x,-0.015)--(\x,0.015);
+      \node[below=5pt] at (\x,0) {$\lab$};
+    }
+    \foreach \y/\lab in {0.25/{\frac14},0.5/{\frac12},0.75/{\frac34}} {
+      \draw (-0.01,\y)--(0.01,\y);
+      \node[left=4pt] at (0,\y) {$\lab$};
+    }
+  \end{scope}
+\end{tikzpicture}
+\end{document}

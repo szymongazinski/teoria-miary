@@ -23,6 +23,16 @@ kompilowane przez `kompiluj.ps1` do plików PDF w tym samym folderze.
   odtworzony na podstawie IMG_6967. Zastosowano ogólne oznaczenia z tablicy,
   ponieważ konkretne wartości przy szkicu nie są dostatecznie czytelne.
 
+## Wykład 7
+
+- `dystrybuanty-lebesgue-dirac.tex` - wykresy F_lambda(t)=t oraz
+  dystrybuanty delta_0 ze zdjęć IMG_7022, IMG_7024 i IMG_7025.
+- `dystrybuanty-atomowa-szkic.tex` - dystrybuanta miary
+  (1/4)delta_{-1}+(1/2)delta_0+(1/4)delta_1, z normalizacją w zerze,
+  oraz schemat dystrybuanty miary na zbiorze Cantora z IMG_7025,
+  zgodnie z doprecyzowaniem użytkownika. Wykres Cantora odtworzono
+  za pomocą skończonego przybliżenia; nie dodano konstrukcji miary.
+
 ## Okładka
 
 - `okladka-kreskowkowa.png` - zatwierdzona ilustracja: postać patrząca
